@@ -1,6 +1,0 @@
-clear
-clc
-close all
-
-%% read first file
-[y,Fs] = audioread('src/)
