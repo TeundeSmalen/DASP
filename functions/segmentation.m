@@ -1,7 +1,7 @@
-function [segments, segment_size] = segmentation(audio, frame_size)
+function [segments, segment_size] = segmentation(audio, Fs, time_frame)
 
 y = audio;
-segment_size = Fs*frame_size/1000;
+segment_size = Fs*time_frame/1000;
 N_segments = ceil(length(y)/segment_size);
 segments(N_segments, segment_size) = 0;
 
