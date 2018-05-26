@@ -1,0 +1,38 @@
+clear
+clc
+close all
+
+%% read first file
+[x,Fs] = audioread('src/clean_speech.wav');
+t = (0 : length(x)-1)/Fs;
+n = length(x);
+
+%% variables
+segment_time = 0.050;    % 20ms
+overlap_time = 0.025;
+
+n_segment = segment_time*Fs;
+n_overlap = overlap_time*Fs;
+n_frame = fix((overlap_time+segment_time)*Fs;
+
+segments = floor(n/n_segment);
+
+%% windows
+h = hamming(n_frame);
+
+%% segmenting
+for i = 0 : segments-2 
+    o = i * n_segment;
+    X(i+1, :) = x(o + 1 : o + n_frame).*h;
+end
+
+%% overlap add
+d = zeros(n, 1);
+for i = 0 : segments-2 
+    o = i * n_segment;
+    d(o + 1 : o + n_frame) = d(o + 1 : o + n_frame) + X(i+1, :)';
+end
+
+plot(x) 
+hold on
+plot(d)
