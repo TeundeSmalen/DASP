@@ -5,4 +5,6 @@ clear
 time_frame = 20;
 
 %%
-[
+%[segments, segment_size] = segmentation(y, Fs, time_frame);
+
+%y1 =  readsph('src/clean_speech.wav');
