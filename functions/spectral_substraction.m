@@ -1,22 +1,30 @@
-function Sk_hat = spectral_substraction(Yk, Nk)
-% store phase and cut
-Yk_phase = angle(Yk);
-Yk = Yk(:, 1:end/2+1);
-Nk = Nk(:, 1:end/2+1);
+function Sk_hat = spectral_substraction(Yk, Nk, L, thres)
+    % allow less arguments
+    if nargin == 2
+        L = 0;
+        thres = 0;
+    elseif nargin == 3
+        thres = 0;
+    end
 
-% get spectral densities
-PNN = abs(Nk).^2;  
-PYY = abs(Yk).^2;
-PNN(2:end-1) = 2*PNN(2:end-1);
-PYY(2:end-1) = 2*PYY(2:end-1);
+    Yk_phase = angle(Yk);   % store phase and cut
 
-% spectral substraction
-PSS = PYY - PNN;
-PSS = [PSS fliplr(PSS(:, 1:end-2))];
-PSS(PSS<0) = 0;
+    PNN = abs(Nk).^2;       % get spectral densities
+    PYY = bartlett_estimate(Yk, L); % bartlett estimate
 
-% retreive signal
-Sk_hat = sqrt(PSS);
-Sk_hat = Sk_hat.*exp(i*Yk_phase);
+    Sk_hat = 1-PNN./PYY;    % spactral substraction
+    Sk_hat(Sk_hat<thres) = thres;   % negative PDF estimates
+    Sk_hat = sqrt(Sk_hat).*abs(Yk);
+    Sk_hat = Sk_hat.*exp(i*Yk_phase);
+end
+
+function PYY = bartlett_estimate(Yk, L)
+    PYY = abs(Yk).^2;
+    
+    PYY_ = PYY;
+    for i = 1 : L
+        PYY_ = PYY_ + circshift(PYY, i);
+    end
+    PYY = PYY_/(L+1);
 end
 
