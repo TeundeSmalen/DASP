@@ -8,9 +8,9 @@ t = (0 : length(s)-1)/Fs;
 sample_length = length(s);
 
 %% variables
-segment_time = 0.025;   % 200ms
-overlap_time = 0.015;   % 0ms
-SNR = 20;                % snr(s,n)
+segment_time = 0.025;   % 25ms
+overlap_time = 0.000;   % 0ms
+SNR = 0;                % snr(s,n)
 
 %% creating noise and segmenting
 y = awgn(s, SNR, 'measured');   % measured noise [snr(s,n) = SNR]
@@ -25,30 +25,11 @@ Nk = fft(N, [], 2);        % row-wise fft
 Sk = fft(S, [], 2);        % row-wise fft
 
 %% speech detection
-PYY = abs(Yk).^2;
-Power = sum(log(PYY), 2);
-N = 10;
-h = 1/N.*ones(N,1);
-Power = filter(h, 1, Power);
+Sk_hat = spectral_substraction(Yk, Nk, 1);
+%Sk_hat = wiener(Yk, Nk);
 
-power = overlap_add(Power, Fs, sample_length, segment_time, overlap_time);
-
-%Sk_hat = spectral_substraction(Yk, Nk);
-Sk_hat = wiener(Yk, Nk);
 S_hat = ifft(Sk_hat, [], 2);    % row wise ifft
 
 %% overlap add
 s_hat = overlap_add(S_hat, Fs, sample_length, segment_time, overlap_time);
-%sound(real(s_hat), Fs);
-
-
-plot(y)
-
-maxdy = max(y)-min(y);
-power = power - min(power); % offset to zero
-power = power/max(power);
-%power(power > 0.002) = max(y);
-%power(power < 0.002) = 0;
-
-hold on
-plot(power)
+sound(real(s_hat), Fs);

@@ -1,7 +1,11 @@
-function psd = bartlett_psd(x, M)
-    xx = reshape(x, [], M);         % split in M parts
-    XX = fft(xx, length(x));        % get fft of normal length
-    PXX = abs(XX).^2/length(xx);    % calculate individual PSD
-    psd = sum(PXX, 2)/M;            % average PSD
+function PByy = bartlett_psd(Pyy, M)
+    PByy = Pyy;
+    for i = M : size(Pyy,1)-M
+        PByy(i,:) = Pyy(i,:);
+        for j = i-M+1 : i-1
+            PByy(i,:) = PByy(i,:) + Pyy(j,:);
+        end
+        PByy(i,:) = PByy(i,:)/M;
+    end
 end
 
