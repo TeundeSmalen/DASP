@@ -1,5 +1,7 @@
-function PSD_bartlett = bartlett_psd(PSD, M)
-h = ones(M,1);
-PSD_bartlett = filter(h, 1, PSD);
+function psd = bartlett_psd(x, M)
+    xx = reshape(x, [], M);         % split in M parts
+    XX = fft(xx, length(x));        % get fft of normal length
+    PXX = abs(XX).^2/length(xx);    % calculate individual PSD
+    psd = sum(PXX, 2)/M;            % average PSD
 end
 
