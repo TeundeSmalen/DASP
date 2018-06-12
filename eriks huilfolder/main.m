@@ -10,17 +10,24 @@ overlap_size = fix(frame_size * 0.60);    % overlap sample size (integer)
 SNR = 20;
 
 y = awgn(x, SNR, 'measured');
+n = y-x;
+sigma_n = std(n);
+
 
 %% segmenting
 Y = segment(y, frame_size, overlap_size, 'shann');
+N = segment(n, frame_size, overlap_size, 'shann');
+
+Yk = fft(Y);
+N = fft(N);
+Pnn = log(sum((abs(N).^2)/frame_size));
 
 %% Algorithms
-std = log(sum(abs(Y).^2)/frame_size);
-%std = movmean(std, 5);
+std = log(sum(abs(Yk).^2)/frame_size);
 std = kron(std, ones(1,fix(length(y)/length(std))));
 std = [std, zeros(1, length(y)-length(std)) ];
 
-thres = -10
+thres = mean(Pnn(1:end-1)) + 0.5;
 std(std > thres) = max(y);
 std(std < thres) = 0;
 

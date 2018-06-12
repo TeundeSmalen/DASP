@@ -1,9 +1,7 @@
-function snr = snr_dd(Yk, Pnn, alpha)
+function snr = snr_dd(Pyy, Pnn, alpha)
 if nargin < 3
    alpha = 0.98; 
 end
-
-Pyy = abs(Yk).^2;
 
 Pss1 = Pyy(1, :) - Pnn(1, :) - 1;
 Pss1(Pss1 < 0) = 0;

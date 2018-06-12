@@ -1,23 +1,38 @@
-function X = segment(x, Fs, segment_time, overlap_time)
-% calculate sizes
-n = length(x);
-n_segment = segment_time*Fs;
-n_frame = fix((overlap_time+segment_time)*Fs);
-segments = floor(n/n_segment);
+function Y = segment(y, frame_size, overlap_size, filter)
+    if nargin < 4
+        disp(1)
+       filter = 'hann'; 
+    end
+    
+    % calculate the step sizes and number of frames
+    step_size = fix(frame_size - overlap_size/2);
+    num_frames = fix(length(y) / step_size) + 1;
+    
+    pad = num_frames*frame_size - length(y);
+    y = padarray(y, pad, 'post');
 
-% hamming filter
-h = sqrt(hann(n_frame));    %seems to perform better
-%h = hamming(n_frame);
-
-if overlap_time == 0
-   h = 1; 
+    % Choose filter
+    switch(filter)
+        case 'rect'
+            h = rectwin(frame_size);
+        case 'hann'
+            h = hann(frame_size);
+        case 'hamm'
+            h = hamming(frame_size);
+        case 'shann'
+            h = sqrt(hann(frame_size));
+        case 'black'
+            h = blackmanharris(frame_size);
+        case 'nutt'
+            h = nuttallwin(frame_size);
+    end
+    
+    % generate the frames
+    for i = 0 : num_frames
+        index = i*step_size + 1;
+        Y(:, i + 1) = y(index: index + frame_size - 1);
+    end   
+    
+    % apply window
+    Y = repmat(h, 1, size(Y,2)) .* Y;
 end
-
-% constructing segmented array
-for i = 0 : segments-2 
-    o = i * n_segment;
-    X(i+1, :) = x(o + 1 : o + n_frame).*h;
-end
-
-end
-
