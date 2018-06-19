@@ -1,0 +1,12 @@
+\section{Framing \& Overlap Add} \label{sec:framing_overlap_add}
+
+% N is frame length, R is hoplength, l is frame index.
+\begin{equation}
+  \label{eq:framing}
+  y_{l}[n] = y[n + lR]w[n],\quad n=0,\hdots,N-1
+\end{equation}
+
+\begin{equation}
+  \label{eq:overlap_add}
+  y[n] =  \sum_{l=1}^{k} y_{l}[n]/w[n]
+\end{equation}

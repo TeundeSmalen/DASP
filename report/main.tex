@@ -1,0 +1,79 @@
+\documentclass[conference]{IEEEtran}
+
+% packages
+\usepackage{graphicx}   % for images
+\newcommand{\MATLAB}{\textsc{Matlab}\xspace}
+\usepackage{mathtools}  % obvious for equations
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[justification=centering]{caption}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp} % for degree
+\usepackage{gensymb}
+
+% matlab
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
+}
+
+% we do not want indents unless specified
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% document, title and authors
+\onecolumn
+\begin{document}
+\title{ET4147: Signal Processing for Communications\\
+    \large Homework 3}
+\author{
+  \IEEEauthorblockN{Erik Hagenaars}
+  \IEEEauthorblockA{4272404}
+  \and
+  \IEEEauthorblockN{Teun de Smalen}
+  \IEEEauthorblockA{4321014}
+}
+\maketitle
+
+% content
+\input{sections/01_introduction}
+\input{sections/02_system}
+\input{sections/03_framing_overlap_add}
+\input{sections/04_noise_estimation}
+\input{sections/05_snr_estimation}
+\input{sections/06_vad}
+\input{sections/07_target_estimation}
+\input{sections/08_conclusion}
+
+% bibliography
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% appendix is onecolumn
+\input{sections/appendix}
+
+\end{document}
