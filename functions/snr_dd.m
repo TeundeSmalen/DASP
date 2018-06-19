@@ -1,20 +1,15 @@
-function snr = snr_dd(Pyy, Pnn, alpha)
+function snr = snr_dd(Pyy, Pnn, S_prev, alpha)
 if nargin < 3
    alpha = 0.98; 
 end
 
-Pss1 = Pyy(1, :) - Pnn(1, :) - 1;
-Pss1(Pss1 < 0) = 0;
-Pss(1, :) = Pss1;
+Pss = abs(S_prev).^2;
 
-for i = 2 : size(Yk,2)
-    Pssi1 = alpha .* Pss(i-1, :)./Pnn(i, :);
+    Pssi1 = alpha .* Pss./Pnn;
     
-    Pssi2 = (1-alpha) .* (Pyy(i, :) - Pnn(i, :) - 1);
-    Pssi2(Pssi2 < 0) = 0;
+    Pssi2 = (1-alpha) .* max((Pyy - Pnn - 1),0);
         
-    Pss(i, :) = Pssi1 + Pssi2;
-end
-
+    Pss(:,1) = Pssi1 + Pssi2;
+    snr = Pss./Pnn;
 end
 
