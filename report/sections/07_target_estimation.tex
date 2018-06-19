@@ -1,0 +1,21 @@
+\section{Target Estimation} \label{sec:target_estimation}
+
+\begin{align}
+  P_{SS,k}(l) &= P_{YY,k}(l) - P_{NN,k}(l)
+  \label{eq:psds1} \\
+  \widehat{\abs{S_{k}(l)}}^{2} &= \abs{Y_{k}(l)}^{2}-\abs{N_{k}(l)}^{2}
+  \label{eq:psds2} \\
+  \widehat{\abs{S_{k}(l)}}^{2} &=
+  \left(\max{\left\{1-\frac{E\left[\abs{N_{k}(l)}^{2}\right]}{\abs{y_{k}(l)}^{2}},\epsilon\right\}}\right)^{\frac{1}{2}}\abs{y_{k}(l)}
+  \label{eq:psds3} \\
+  S_{k}(l)^{2} &= \widehat{\abs{S_{k}(l)}}^{2} \dot e^{j\measuredangle y_{k}(l)}
+\end{align}
+
+\begin{align}
+  \hat{S_{k}} &= H_{k} \dot Y_{k}
+  \label{eq:wiener1} \\
+  H_{k} &= \frac{P_{SY,k}}{P_{PYY,k}}
+  \label{eq:wiener2} \\
+  &= \frac{SNR_{k}}{SNR_{k}+1}
+  \label{eq:wiener3}
+\end{align}

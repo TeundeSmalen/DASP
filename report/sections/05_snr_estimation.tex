@@ -1,0 +1,25 @@
+\section{SNR Estimation} \label{sec:snr_estimation}
+
+\begin{equation}
+  \xi = \frac{\sigma_{S,k}(l)^{2}}{\sigma_{S,k}(l)^{2}} =
+  \frac{P_{SS,k}}{P_{NN,k}} =
+  \frac{E\left\{\abs{S_{k}(l)}^{2}\right\}}{E\left\{\abs{N_{k}(l)}^{2}\right\}}
+  \label{eq:SNR}
+\end{equation}
+
+\begin{align}
+  \xi_{k}(l) &= \frac{E\left\{\abs{Y_{k}(l)}^{2}\right\}}{E\left\{\abs{N_{k}(l)}^{2}\right\}} - 1
+  \label{eq:ML1}\\
+  &= \frac{\hat P_{YY,k}^{B}(l)}{\frac{1}{L}E\left\{\abs{N_{k}(l)}^{2}\right\}}
+  \label{eq:M2}
+\end{align}
+
+\begin{align}
+  \xi_{k}(l) &= \alpha \frac{E\left\{\abs{S_{k}(l)}^{2}\right\}}{E\left\{\abs{N_{k}(l)}^{2}\right\}} +
+  (1-\alpha)\left(\frac{E\left\{\abs{Y_{k}(l)}^{2}\right\}}{E\left\{\abs{N_{k}(l)}^{2}\right\}} - 1\right)
+  \label{eq:dd1}\\
+  \abs{S_{k}(l)}^{2} &= \abs{\hat S_{k}(l-1)}^{2}
+  \label{eq:dd2} \\
+  \frac{E\left\{\abs{Y_{k}(l)}^{2}\right\}}{E\left\{\abs{N_{k}(l)}^{2}\right\}} - 1 &=
+  \max \left[(\frac{\abs{Y_{k}(l)}^{2}}{E\left\{\abs{N_{k}(l)}^{2}\right\}}-1,0)\right]
+\end{align}

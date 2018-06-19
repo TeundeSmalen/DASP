@@ -1,0 +1,54 @@
+\section{Noise Estimation} \label{sec:noise_estimation}
+
+\begin{align}
+  H_{0}: & Y_{K}(l) = N_{k}(l) \quad \text{(speech absence)}
+  \label{eq:H0} \\
+  H_{1}: & Y_{K}(l) = S_{k}(l) + N_{k}(l) \quad \text{(speech presence)}
+  \label{eq:H1}
+\end{align}
+
+\begin{equation}
+  f(x)=
+  \begin{dcases}
+      \alpha \hat \sigma_{N,k}^{2}(l-1) + (1-\alpha)\abs{y_{k}(l)}^{2} & \text{when } H_{0}(l)\\
+      \hat \sigma_{N,k}^{2}(l-1) & \text{when } H_{1}(l)
+  \end{dcases}
+  \label{eq:smoothingsigma}
+\end{equation}
+
+\begin{align}
+  \mathbf{Q} &=
+  \begin{Bmatrix}
+    P_{YY,k}(l-M+1) & \hdots & P_{YY,k}(l)
+  \end{Bmatrix}
+  \label{eq:Q} \\
+  \hat \sigma_{N,k}^{2}(l) &= Q_{min}
+  \label{eq:Qmin}
+\end{align}
+
+\begin{align}
+  \widehat{\sigma_{N}^{2}}(l) &= \alpha \widehat{\sigma_{N}^{2}}(l-1) + (1-\alpha)E\left[ \abs{N_{k}(l)}^{2}\abs{y_{k}(l)}\right]
+  \label{eq:noiseMMSE1} \\
+  E\left[ \abs{N_{k}(l)}^{2}\abs{y_{k}(l)}\right] &=
+  P\left(H_{0,k}(l)|y_{k}(l)\right) E\left[\abs{N_{k}(l)}^{2}\abs{y_{k}(l)},H_{0,k}\right] +
+  P\left(H_{1,k}(l)|y_{k}(l)\right) E\left[\abs{N_{k}(l)}^{2}\abs{y_{k}(l)},H_{1,k}\right]
+  \label{eq:noiseMMSE2}
+\end{align}
+
+\begin{align}
+  P\left(H_{0,k}(l)|y_{k}(l)\right) &= 1 - P\left(H_{1,k}(l)|y_{k}(l)\right)
+  \label{eq:MMSEu1} \\
+  E\left[\abs{N_{k}(l)}^{2}\abs{y_{k}(l)},H_{0,k}\right] &= \abs{y_{k}(l)^{2}}
+  \label{eq:MMSEu2} \\
+  E\left[\abs{N_{k}(l)}^{2}\abs{y_{k}(l)},H_{1,k}\right] &= \widehat{\sigma_{N}^{2}}(l-1)
+  \label{eq:MMSEu3}
+\end{align}
+
+\begin{align}
+  P\left(H_{1,k}(l)|y_{k}(l)\right) &= \frac{P\left(H_{1,k}(l))\right)p_{Y|H_{1}}}{P\left(H_{1,k}(l))\right)p_{Y|H_{1}} + P\left(H_{0,k}(l))\right)p_{Y|H_{0}}}
+  \label{eq:MMSEu4}\\
+  p_{Y|H_{0}} &= \frac{1}{\widehat{\sigma_{N}^{2}} \pi} \exp\left(-\frac{\abs{y^{2}}}{\widehat{\sigma_{N}^{2}}}\right)
+  \label{eq:pyh0}\\
+  p_{Y|H_{0}} &= \frac{1}{\widehat{\sigma_{N}^{2}} (1+\xi_{H_{1}})\pi} \exp\left(-\frac{\abs{y^{2}}}{\widehat{\sigma_{N}^{2}}(1+\xi_{H_{1}})}\right)
+  \label{eq:pyh1}
+\end{align}
