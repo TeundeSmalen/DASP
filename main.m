@@ -7,7 +7,7 @@ close all
 x_length = length(x);                       % audio length
 frame_length = fix(Fs * 0.018);             % frame length (seconds)
 overlap_length = fix(frame_length * 0.6);   % overlap length (percentage)
-SNR = 5;                                   % SNR for noise
+SNR = -5;                                   % SNR for noise
 filter = 'shann';
 
 
@@ -30,8 +30,8 @@ Speech1 = zeros(xsize,ysize);
 Speech2 = zeros(xsize,ysize);
 
 %% Variables
-alpha_noisePSD = 0.98;   % alpha for noise estimate
-alpha_SNR = 0.98;       % alpha for SNR estimation
+alpha_noisePSD = 0.98;  % alpha for noise estimate
+alpha_SNR = 0.99;       % alpha for SNR estimation
 L = 1;                  % dimension of bartlett estimate
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
 silent_frames = 10;     % number of init silence frames
@@ -44,8 +44,10 @@ for i = 1 : size(Y,2)   % for each frame
     Pyyi = abs(Yi).^2;
     Pyy(:,i) = Pyyi;
     
-    if L > 1    % bartlett estimate
-        Pyyi = sum(Pyy(:,end-L+1:end))./L;
+    if L > 1 && i > L   % bartlett estimate
+        for j = 1:frame_length
+        Pyyi(j) = sum(Pyy(j,i-L+1:i))./L;
+        end
     end
     
     % Noise PSD Estimation
@@ -69,13 +71,14 @@ for i = 1 : size(Y,2)   % for each frame
     
     % Target Estimation
     %S_hat = spectral_substraction(Pyyi, Pnni, Yi, sqrt(0.1));
-    S_hat = wiener(Pyyi, Pnni, Yi, SNRi);
+    S_hat = wiener(Yi, SNRi);
     
     X(:,i) = ifft(S_hat);
 
 end
 toc
 %% Overlap add and sound
+
 x = overlap_addv3(X, overlap_length, filter);
 x = real(x);
 for i = 1:frame_length
