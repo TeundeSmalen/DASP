@@ -1,11 +1,13 @@
 \section{Framing \& Overlap Add} \label{sec:framing_overlap_add}
 
+The first step, as described in Figure \ref{fig:system}, is the framing of the audio file. This is done according to Equation \ref{eq:framing}. Where l is the frame index (the l-th frame), n is sample number, R is the hoplength. $w[n]$ is the window used to smoothen the signal in such a way that the signal does not become discontinues. For the window multiple options can be used. As in \cite{}\todo{Paper omtrent windowing}, the square-root Hann window is used.
 % N is frame length, R is hoplength, l is frame index.
 \begin{equation}
   \label{eq:framing}
   y_{l}[n] = y[n + lR]w[n],\quad n=0,\hdots,N-1
 \end{equation}
 
+The last step of the system is the Overlap Add-block. The windowing is removed after which the samples are added back together to one file.
 \begin{equation}
   \label{eq:overlap_add}
   y[n] =  \sum_{l=1}^{k} y_{l}[n]/w[n]
