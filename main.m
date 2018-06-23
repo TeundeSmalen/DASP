@@ -7,7 +7,7 @@ close all
 x_length = length(x);                       % audio length
 frame_length = fix(Fs * 0.018);             % frame length (seconds)
 overlap_length = fix(frame_length * 0.6);   % overlap length (percentage)
-SNR = -5;                                   % SNR for noise
+SNR = 20;                                   % SNR for noise
 filter = 'shann';
 
 
@@ -31,7 +31,7 @@ Speech2 = zeros(xsize,ysize);
 
 %% Variables
 alpha_noisePSD = 0.98;  % alpha for noise estimate
-alpha_SNR = 0.99;       % alpha for SNR estimation
+alpha_SNR = 0.1;       % alpha for SNR estimation
 L = 1;                  % dimension of bartlett estimate
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
 silent_frames = 10;     % number of init silence frames
@@ -94,5 +94,5 @@ figure
 hold on
 plot(y(1:250000))
 plot(x(1:250000))
-plot(Speech_2(1:250000))
+%plot(Speech_2(1:250000))
 %soundsc(x(1:250000), Fs);
