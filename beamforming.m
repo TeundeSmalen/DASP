@@ -6,7 +6,7 @@ close all
 [x1,~] = audioread('src/clean_speech.wav'); % audio
 [x2,Fs] = audioread('src/babble_noise.wav'); % audio
 
-samples = 10000;
+samples = 250000;
 x1 = x1(fix(end/2):fix(end/2) + samples);
 x2 = x2(fix(end/2):fix(end/2) + samples);
 

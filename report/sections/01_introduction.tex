@@ -1,2 +1,6 @@
 \section{Introduction} \label{sec:introduction}
-This report discusses the work done on the mini-project for the course "IN4182 - Digital Audio and Speech Processing". In the first chapter the overall system is described, followed by the method used for framing.
+The use of microphones and audio devices are becoming more relevant every year. Speech audio is used to communicate humans and recently often with devices as well. Hearing loss and noisy spaces are an increasing problem which makes it harder to communicate. It is therefor important to come up with techniques to enhance the desired speech signal from a noisy environment. This comes with many challenges including correlating noises, dynamic noise energies and interference noise. This report discusses the work done on the mini-project for the course "IN4182 - Digital Audio and Speech Processing" in which a single microphone speech enhancement system is designed.
+
+The first objective is to create an architecture of the system, which is discussed in Section \ref{sec:system}. From this, five subsystems are designed and implemented in the Sections \ref{sec:framing_overlap_add} to \ref{sec:target_estimation}. After designing the system, its performance will be tested and concluded in Section \ref{sec:conclusion}.
+
+As a bonus, a multi microphone system is designed with the implementation of beamformers in Section \ref{sec:mm_bf}.
