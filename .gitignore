@@ -4,3 +4,9 @@ functions/SegWinTest.m
 main_teun.m
 readsph.m
 main_teun.m
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+main.log

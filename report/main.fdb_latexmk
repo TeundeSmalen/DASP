@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1529744636 "main.aux" "main.bbl" "main" 1529744638
+["bibtex main"] 1529758997 "main.aux" "main.bbl" "main" 1529765251
   "C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1529744638 2933 a0c5a4832812656744290f9b7f2a7e0e ""
+  "main.aux" 1529765250 3108 b72a5b33c32ff15a9417ebfa97afe3b8 ""
   "references.bib" 1529744489 627 05710f499034bc06b0244bb0c0ec45dc ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1529744636 "main.tex" "main.pdf" "main" 1529744638
+["pdflatex"] 1529765247 "main.tex" "main.pdf" "main" 1529765251
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb8t.tfm" 1136772254 6880 f19b8995b61c334d78fc734065f6b4d4 ""
@@ -171,14 +171,15 @@
   "C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/was/gensymb.sty" 1081504700 4755 29d19942d7123701aa6a3876b9ba11b1 ""
   "C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "IEEEtran.cls" 1522067790 202657 f6698b073bb6e66a6e6436a00d85499c ""
+  "images/optimal_overlap.png" 1529759772 62380 19d14d43e517a32b68e0057ba2f6bb43 ""
   "images/system.pdf" 1529399260 48502 bdc60760f96f27c51a0a70a587542349 ""
-  "main.aux" 1529744638 2933 a0c5a4832812656744290f9b7f2a7e0e ""
-  "main.bbl" 1529744636 1316 56fda42828f0d51cfdd5d0384f6397f7 "bibtex main"
-  "main.tdo" 1529744638 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.aux" 1529765250 3108 b72a5b33c32ff15a9417ebfa97afe3b8 ""
+  "main.bbl" 1529758997 1316 56fda42828f0d51cfdd5d0384f6397f7 "bibtex main"
+  "main.tdo" 1529765250 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.tex" 1529744324 2390 4cf366229e80a313c96ad5f8b97e440d ""
   "sections/01_introduction.tex" 1529740809 1193 bbf9fa1e8c8908412d664685a57546ec ""
   "sections/02_system.tex" 1529743782 5095 f5cef58f0f264855084c3db918094088 ""
-  "sections/03_framing_overlap_add.tex" 1529744631 916 a69afcae1cf785e309e55f30f573900c ""
+  "sections/03_framing_overlap_add.tex" 1529765241 1793 ef01833812ace0a1ef301b6df0b7157b ""
   "sections/04_noise_estimation.tex" 1529737357 2216 a53ee8ed376bea065e92973f535a3981 ""
   "sections/05_snr_estimation.tex" 1529412611 1036 80a09cf9cb9a59fcbfdbb66a7022808e ""
   "sections/06_vad.tex" 1529412768 245 4ef83f45a2b7fd146c02fae256e2adfb ""
@@ -187,7 +188,7 @@
   "sections/appendix.tex" 1529395894 71 2a8e7fe1adb4a5e41d33b61677dd3576 ""
   "sections/bonus.tex" 1529738930 58 7391b9ed3e3b3875cb8e3ac2f7f5098d ""
   (generated)
-  "main.tdo"
   "main.aux"
-  "main.pdf"
+  "main.tdo"
   "main.log"
+  "main.pdf"

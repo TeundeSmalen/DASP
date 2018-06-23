@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 16:47
 entering extended mode
 **./main.tex
 (main.tex
@@ -1209,14 +1209,20 @@ File: images/system.pdf Graphic file (type pdf)
 <use images/system.pdf>
 Package pdftex.def Info: images/system.pdf  used on input line 44.
 (pdftex.def)             Requested size: 524.09975pt x 153.58218pt.
-) (sections/03_framing_overlap_add.tex) (sections/04_noise_estimation.tex [2 <.
-/images/system.pdf
+) (sections/03_framing_overlap_add.tex [2 <./images/system.pdf
 
 pdfTeX warning: pdflatex (file ./images/system.pdf): PDF inclusion: invalid oth
 er resource which is no dict (key 'ProcSets', type <array>); ignored.
->]) (sections/05_snr_estimation.tex [3]) (sections/06_vad.tex) (sections/07_tar
-get_estimation.tex) (sections/bonus.tex) (sections/08_conclusion.tex) (main.bbl
-) (sections/appendix.tex [4])
+>]
+<images/optimal_overlap.png, id=43, 903.375pt x 361.35pt>
+File: images/optimal_overlap.png Graphic file (type png)
+<use images/optimal_overlap.png>
+Package pdftex.def Info: images/optimal_overlap.png  used on input line 19.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+) (sections/04_noise_estimation.tex [3 <./images/optimal_overlap.png (PNG copy)
+>]) (sections/05_snr_estimation.tex) (sections/06_vad.tex) (sections/07_target_
+estimation.tex [4]) (sections/bonus.tex) (sections/08_conclusion.tex) (main.bbl
+) (sections/appendix.tex [5])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1228,14 +1234,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
+[6
 
 ] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 17629 strings out of 493303
- 330222 string characters out of 3138859
- 405198 words of memory out of 3000000
- 20808 multiletter control sequences out of 15000+200000
+ 17636 strings out of 493303
+ 330380 string characters out of 3138859
+ 403198 words of memory out of 3000000
+ 20813 multiletter control sequences out of 15000+200000
  107318 words of font info for 116 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,77p,831b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1254,9 +1260,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 215801 bytes).
+Output written on main.pdf (6 pages, 280199 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

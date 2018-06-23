@@ -7,29 +7,67 @@ close all
 t = (0 : length(s)-1)/Fs;
 sample_length = length(s);
 
-%% variables
-segment_time = 0.025;   % 25ms
-overlap_time = 0.000;   % 0ms
-SNR = 0;                % snr(s,n)
+% find optimal percentage
+MSE1 = [];
+MSE2 = [];
+MSE3 = [];
+for p = 0.4 : 0.01 : 1
 
-%% creating noise and segmenting
-y = awgn(s, SNR, 'measured');   % measured noise [snr(s,n) = SNR]
-n = y - s;                      % model is y = s + n
-Y = segment(y, Fs, segment_time, overlap_time);
-S = segment(s, Fs, segment_time, overlap_time);
-N = segment(n, Fs, segment_time, overlap_time);
+frame_size = 250;
+overlap_size = fix(frame_size*p);
+step_size = frame_size-fix(overlap_size/2);
 
-%% Algorithms
-Yk = fft(Y, [], 2);        % row-wise fft
-Nk = fft(N, [], 2);        % row-wise fft
-Sk = fft(S, [], 2);        % row-wise fft
+h1 = sqrt(hann(frame_size));
+h2 = hann(frame_size);
+h3 = hamming(frame_size);
 
-%% speech detection
-Sk_hat = spectral_substraction(Yk, Nk, 1);
-%Sk_hat = wiener(Yk, Nk);
+num = 100;
+H1 = zeros(1,num*step_size + fix(overlap_size/2));
+H2 = zeros(1,num*step_size + fix(overlap_size/2));
+H3 = zeros(1,num*step_size + fix(overlap_size/2));
+for i = 1 : num
+    idx = 1+(i-1)*step_size;
+    H1(idx:idx+frame_size-1) = H1(idx:idx+frame_size-1) + h1';
+    H2(idx:idx+frame_size-1) = H2(idx:idx+frame_size-1) + h2';
+    H3(idx:idx+frame_size-1) = H3(idx:idx+frame_size-1) + h3';
+end
 
-S_hat = ifft(Sk_hat, [], 2);    % row wise ifft
+one = ones(1,length(H1));
+MSE1 = [MSE1 mse(one,H1)];
+MSE2 = [MSE2 mse(one,H2)];
+MSE3 = [MSE3 mse(one,H3)];
+end
+subplot(121);
+plot((0.4 : 0.01 : 1)*100, MSE1); hold on;
+plot((0.4 : 0.01 : 1)*100, MSE2);
+plot((0.4 : 0.01 : 1)*100, MSE3);
+title('Optimal Overlap');
+xlabel('overlap [%]');
+ylabel('mse');
+legend('sqrt-Hann', 'Hann', 'Hamming');
+grid;
 
-%% overlap add
-s_hat = overlap_add(S_hat, Fs, sample_length, segment_time, overlap_time);
-sound(real(s_hat), Fs);
+%% plot around optimal percentage
+subplot(122)
+r = 0.67 : 0.01 : 0.70;
+for p = r
+frame_size = 250;
+overlap_size = fix(frame_size*p);
+step_size = frame_size-fix(overlap_size/2);
+
+h = sqrt(hann(frame_size));
+%h = hann(frame_size);
+num = 3;
+H = zeros(1,num*step_size + fix(overlap_size/2));
+for i = 1 : num
+    idx = 1+(i-1)*step_size;
+    H(idx:idx+frame_size-1) = H(idx:idx+frame_size-1) + h';
+end
+
+plot(linspace(0,3,length(H)),H); hold on;
+end
+title('Overlapped sqrt-Hann');
+xlabel('frame');
+ylabel('added windows');
+grid;
+legend([num2str(100*(r)') [' %';' %';' %';' %']]);

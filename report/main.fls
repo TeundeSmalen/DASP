@@ -329,6 +329,11 @@ INPUT ./images/system.pdf
 INPUT ./images/system.pdf
 INPUT sections/03_framing_overlap_add.tex
 INPUT sections/03_framing_overlap_add.tex
+INPUT images/optimal_overlap.png
+INPUT ./images/optimal_overlap.png
+INPUT ./images/optimal_overlap.png
+INPUT ./images/optimal_overlap.png
+INPUT ./images/optimal_overlap.png
 INPUT sections/04_noise_estimation.tex
 INPUT sections/04_noise_estimation.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
