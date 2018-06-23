@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 18:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -1227,8 +1227,8 @@ File: images/vad.png Graphic file (type png)
 Package pdftex.def Info: images/vad.png  used on input line 26.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
 ) (sections/07_target_estimation.tex [4]) (sections/bonus.tex) (sections/08_con
-clusion.tex) (main.bbl) (sections/appendix.tex [5 <./images/vad.png (PNG copy)>
-])
+clusion.tex) (main.bbl [5 <./images/vad.png (PNG copy)>]) (sections/appendix.te
+x [6])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1240,7 +1240,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[7
 
 ] (main.aux) ) 
 Here is how much of TeX's memory you used:
@@ -1266,9 +1266,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 340915 bytes).
+Output written on main.pdf (7 pages, 345057 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

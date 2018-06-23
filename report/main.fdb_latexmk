@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1529770300 "main.aux" "main.bbl" "main" 1529770303
+["bibtex main"] 1529771818 "main.aux" "main.bbl" "main" 1529771979
   "C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1529770302 3308 02339bc7eee4842005e485a00808c09c ""
+  "main.aux" 1529771979 3308 2ed6cde124767af38fd72b4a6493a2b7 ""
   "references.bib" 1529744489 627 05710f499034bc06b0244bb0c0ec45dc ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1529770301 "main.tex" "main.pdf" "main" 1529770303
+["pdflatex"] 1529771977 "main.tex" "main.pdf" "main" 1529771979
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb8t.tfm" 1136772254 6880 f19b8995b61c334d78fc734065f6b4d4 ""
@@ -174,9 +174,9 @@
   "images/optimal_overlap.png" 1529759772 62380 19d14d43e517a32b68e0057ba2f6bb43 ""
   "images/system.pdf" 1529399260 48502 bdc60760f96f27c51a0a70a587542349 ""
   "images/vad.png" 1529770043 58726 8b39685d62ad57343716dc960e299c97 ""
-  "main.aux" 1529770302 3308 02339bc7eee4842005e485a00808c09c ""
-  "main.bbl" 1529770301 1316 56fda42828f0d51cfdd5d0384f6397f7 "bibtex main"
-  "main.tdo" 1529770302 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.aux" 1529771979 3308 2ed6cde124767af38fd72b4a6493a2b7 ""
+  "main.bbl" 1529771818 1316 56fda42828f0d51cfdd5d0384f6397f7 "bibtex main"
+  "main.tdo" 1529771978 0 d41d8cd98f00b204e9800998ecf8427e ""
   "main.tex" 1529744324 2390 4cf366229e80a313c96ad5f8b97e440d ""
   "sections/01_introduction.tex" 1529740809 1193 bbf9fa1e8c8908412d664685a57546ec ""
   "sections/02_system.tex" 1529743782 5095 f5cef58f0f264855084c3db918094088 ""
@@ -187,9 +187,9 @@
   "sections/07_target_estimation.tex" 1529416321 736 fc22ca8400451c4f6b44a11654921308 ""
   "sections/08_conclusion.tex" 1529397331 45 d6670679220a2de1c619f21f3959cc30 ""
   "sections/appendix.tex" 1529395894 71 2a8e7fe1adb4a5e41d33b61677dd3576 ""
-  "sections/bonus.tex" 1529738930 58 7391b9ed3e3b3875cb8e3ac2f7f5098d ""
+  "sections/bonus.tex" 1529771973 1552 94310c45221994c5d4ecd0738973fa72 ""
   (generated)
-  "main.pdf"
-  "main.log"
-  "main.tdo"
   "main.aux"
+  "main.pdf"
+  "main.tdo"
+  "main.log"
