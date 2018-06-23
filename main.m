@@ -10,8 +10,6 @@ overlap_length = fix(frame_length * 0.6);   % overlap length (percentage)
 SNR = 20;                                   % SNR for noise
 filter = 'shann';
 
-
-
 %% Model and segment
 y = awgn(x, SNR, 'measured');   % noisy signal
 Y = segment(y, frame_length, overlap_length, filter);

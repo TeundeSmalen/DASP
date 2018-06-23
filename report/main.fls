@@ -343,6 +343,11 @@ INPUT sections/05_snr_estimation.tex
 INPUT sections/05_snr_estimation.tex
 INPUT sections/06_vad.tex
 INPUT sections/06_vad.tex
+INPUT images/vad.png
+INPUT ./images/vad.png
+INPUT ./images/vad.png
+INPUT ./images/vad.png
+INPUT ./images/vad.png
 INPUT sections/07_target_estimation.tex
 INPUT sections/07_target_estimation.tex
 INPUT sections/bonus.tex

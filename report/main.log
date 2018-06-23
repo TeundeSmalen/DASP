@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  23 JUN 2018 18:11
 entering extended mode
 **./main.tex
 (main.tex
@@ -1220,9 +1220,15 @@ File: images/optimal_overlap.png Graphic file (type png)
 Package pdftex.def Info: images/optimal_overlap.png  used on input line 19.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
 ) (sections/04_noise_estimation.tex [3 <./images/optimal_overlap.png (PNG copy)
->]) (sections/05_snr_estimation.tex) (sections/06_vad.tex) (sections/07_target_
-estimation.tex [4]) (sections/bonus.tex) (sections/08_conclusion.tex) (main.bbl
-) (sections/appendix.tex [5])
+>]) (sections/05_snr_estimation.tex) (sections/06_vad.tex
+<images/vad.png, id=48, 903.375pt x 361.35pt>
+File: images/vad.png Graphic file (type png)
+<use images/vad.png>
+Package pdftex.def Info: images/vad.png  used on input line 26.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+) (sections/07_target_estimation.tex [4]) (sections/bonus.tex) (sections/08_con
+clusion.tex) (main.bbl) (sections/appendix.tex [5 <./images/vad.png (PNG copy)>
+])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1238,13 +1244,13 @@ Before submitting the final camera ready copy, remember to:
 
 ] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 17636 strings out of 493303
- 330380 string characters out of 3138859
- 403198 words of memory out of 3000000
- 20813 multiletter control sequences out of 15000+200000
+ 17644 strings out of 493303
+ 330487 string characters out of 3138859
+ 405198 words of memory out of 3000000
+ 20820 multiletter control sequences out of 15000+200000
  107318 words of font info for 116 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,77p,831b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,14n,77p,831b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
@@ -1260,9 +1266,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 280199 bytes).
+Output written on main.pdf (6 pages, 340915 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
