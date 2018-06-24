@@ -24,15 +24,16 @@ The method used to estimate the noise PSD is based on Voice Activity Detector. T
 %This method is 
 
 \subsection{Minimum Statistics Method}
-The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $Y_{l}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}.
+The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $y_{k}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}. Because using only the minimum value would be a underestimate of $E(|N|^2)$. A Biasing factor, $B_{min}$ is added. This biasing factor used is the mean of the 10 previous values of $Q_k(l)$.
 \begin{align}
+Q_{k}(l) &= \alpha_k(l)Q_k(l-1)+(1-\alpha_k(l))\abs{y_{k}(l)}^{2}\label{eq:Qk} \\
   \mathbf{Q} &=
   \begin{Bmatrix}
-    P_{YY,k}(l-M+1) & \hdots & P_{YY,k}(l)
+    Q_{k}(l-L+1) & \hdots & Q_{k}(l)
   \end{Bmatrix}
   \label{eq:Q} \\
-  \hat \sigma_{N,k}^{2}(l) &= Q_{min}
-  \label{eq:Qmin}
+  \hat \sigma_{N,k}^{2}(l) &= B_{min}Q_{min}
+  \label{eq:Qmin}\\
 \end{align}
 
 \todo[inline]{Noise PSD vergelijken}
