@@ -87,6 +87,9 @@ toc
 
 x = overlap_addv3(X, overlap_length, filter);
 x = real(x);
+x = x(1:size(y(:,1),1));
+factor = max(y)/max(x);
+x = factor*x;
 for i = 1:frame_length
     Speech1(i,:) = Speech(1,:);
     Speech2(i,:) = Speech(2,:);

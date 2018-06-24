@@ -1,4 +1,4 @@
- clear
+clear
 clc
 close all
 
@@ -28,11 +28,11 @@ Speech1 = zeros(xsize,ysize);
 Speech2 = zeros(xsize,ysize);
 
 %% Variables
-alpha_noisePSD = 0.5;  % alpha for noise estimate
-alpha_SNR = 0.1;       % alpha for SNR estimation
+alpha_noisePSD = 0.98;  % alpha for noise estimate
+alpha_SNR = 0.98;       % alpha for SNR estimation
 L = 1;                  % dimension of bartlett estimate
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
-silent_frames = 10;     % number of init silence frames
+silent_frames = 50;     % number of init silence frames
 tic
 %% Noise Enhancement
 for i = 1 : size(Y,2)   % for each frame
@@ -79,6 +79,9 @@ toc
 
 x = overlap_addv3(X, overlap_length, filter);
 x = real(x);
+x = x(1:size(y(:,1),1));
+factor = max(y)/max(x);
+x = factor*x;
 for i = 1:frame_length
     Speech1(i,:) = Speech(1,:);
     Speech2(i,:) = Speech(2,:);
