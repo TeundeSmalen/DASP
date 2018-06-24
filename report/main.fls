@@ -287,11 +287,6 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmrc8t.tfm
 INPUT main.tdo
 INPUT main.tdo
-OUTPUT main.tdo
-INPUT sections/01_introduction.tex
-INPUT sections/01_introduction.tex
-INPUT sections/02_system.tex
-INPUT sections/02_system.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
@@ -309,6 +304,11 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ts1ptm.fd
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
+OUTPUT main.tdo
+INPUT sections/01_introduction.tex
+INPUT sections/01_introduction.tex
+INPUT sections/02_system.tex
+INPUT sections/02_system.tex
 OUTPUT main.pdf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr8t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
@@ -352,6 +352,11 @@ INPUT sections/07_target_estimation.tex
 INPUT sections/07_target_estimation.tex
 INPUT sections/bonus.tex
 INPUT sections/bonus.tex
+INPUT images/beamformer_sum_delay.png
+INPUT ./images/beamformer_sum_delay.png
+INPUT ./images/beamformer_sum_delay.png
+INPUT ./images/beamformer_sum_delay.png
+INPUT ./images/beamformer_sum_delay.png
 INPUT sections/08_conclusion.tex
 INPUT sections/08_conclusion.tex
 INPUT main.bbl
