@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  24 JUN 2018 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  24 JUN 2018 23:40
 entering extended mode
 **./main.tex
 (main.tex
@@ -1232,47 +1232,60 @@ File: images/msmethod.png Graphic file (type png)
 <use images/msmethod.png>
 Package pdftex.def Info: images/msmethod.png  used on input line 48.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+<images/MeanK10.png, id=49, 903.375pt x 361.35pt>
+File: images/MeanK10.png Graphic file (type png)
+<use images/MeanK10.png>
+Package pdftex.def Info: images/MeanK10.png  used on input line 57.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+<images/MeanKinf.png, id=50, 903.375pt x 361.35pt>
+File: images/MeanKinf.png Graphic file (type png)
+<use images/MeanKinf.png>
+Package pdftex.def Info: images/MeanKinf.png  used on input line 64.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
 [4
 
- <./images/noisepsd.png (PNG copy)>]) [5 <./images/msmethod.png (PNG copy)>] (s
-ections/05_snr_estimation.tex
-<images/mlsnr.png, id=57, 903.375pt x 361.35pt>
+ <./images/noisepsd.png (PNG copy)>]
+Underfull \vbox (badness 5667) has occurred while \output is active []
+
+[5 <./images/msmethod.png (PNG copy)> <./images/MeanK10.png (PNG copy)>]) [6 <.
+/images/MeanKinf.png (PNG copy)>] (sections/05_snr_estimation.tex
+<images/mlsnr.png, id=62, 903.375pt x 361.35pt>
 File: images/mlsnr.png Graphic file (type png)
 <use images/mlsnr.png>
 Package pdftex.def Info: images/mlsnr.png  used on input line 26.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
-[6
+[7
 
  <./images/mlsnr.png (PNG copy)>]
 
-LaTeX Warning: Reference `eq:dd3.' on page 7 undefined on input line 33.
+LaTeX Warning: Reference `eq:dd3.' on page 8 undefined on input line 33.
 
-<images/ddsnr.png, id=61, 903.375pt x 361.35pt>
+<images/ddsnr.png, id=67, 903.375pt x 361.35pt>
 File: images/ddsnr.png Graphic file (type png)
 <use images/ddsnr.png>
 Package pdftex.def Info: images/ddsnr.png  used on input line 51.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
-) [7 <./images/ddsnr.png (PNG copy)>] (sections/06_vad.tex
-<images/vad.png, id=67, 903.375pt x 361.35pt>
+) [8 <./images/ddsnr.png (PNG copy)>] (sections/06_vad.tex
+<images/vad.png, id=72, 903.375pt x 361.35pt>
 File: images/vad.png Graphic file (type png)
 <use images/vad.png>
 Package pdftex.def Info: images/vad.png  used on input line 26.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
-) [8
+) [9
 
- <./images/vad.png (PNG copy)>] (sections/07_target_estimation.tex) [9
+ <./images/vad.png (PNG copy)>] (sections/07_target_estimation.tex) [10
 
 ] (sections/bonus.tex
-<images/beamformer_sum_delay.png, id=77, 451.6875pt x 361.35pt>
+<images/beamformer_sum_delay.png, id=82, 451.6875pt x 361.35pt>
 File: images/beamformer_sum_delay.png Graphic file (type png)
 <use images/beamformer_sum_delay.png>
 Package pdftex.def Info: images/beamformer_sum_delay.png  used on input line 43
 .
 (pdftex.def)             Requested size: 262.04987pt x 209.6493pt.
-) [10
+) [11
 
  <./images/beamformer_sum_delay.png (PNG copy)>] (sections/08_conclusion.tex) (
-main.bbl) (sections/appendix.tex [11
+main.bbl) (sections/appendix.tex [12
 
 ])
 
@@ -1286,7 +1299,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[12
+[13
 
 ] (main.aux)
 
@@ -1294,10 +1307,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17682 strings out of 493303
- 331188 string characters out of 3138859
+ 17694 strings out of 493303
+ 331416 string characters out of 3138859
  399198 words of memory out of 3000000
- 20852 multiletter control sequences out of 15000+200000
+ 20862 multiletter control sequences out of 15000+200000
  108425 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,77p,842b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1316,9 +1329,9 @@ ts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8
 a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (12 pages, 614794 bytes).
+Output written on main.pdf (13 pages, 716957 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

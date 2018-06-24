@@ -1,1 +1,16 @@
-\section{Conclusion} \label{sec:conclusion}
+\section{Evaluation and Conclusion} \label{sec:conclusion}
+\subsection{Evaluation}
+In this Section, more results and evaluation are discussed about the subsystems and the system as a whole.
+
+The most important part of the estimations, is the noise estimation. In Section \ref{sec:noise_estimation}, three methods of noise estimations are discussed where two are implemented. The MMSE estimator was found to need too many prior knowledge. The other methods, the VAD approach and the MS approach have found to be sufficient to reduce the noise in the system. From observations, the VAD approach seemed more unstable. This was due to the debugging and non-optimal fitting of the variables for the VAD and the SNR estimator on which the VAD depended on. The MS approach was found to be more stable and accurate at estimating the noise. This was due to the smoothing and independence.
+
+The SNR estimator was important for the VAD and the Wiener filter. Two methods were implemented. The maximum likelihood approach and the decicion directed approach. From observations, the smoothening approach (DD), was found to be more effective at estimating the SNR.
+
+At last, the target estimation is discussed. In Section \ref{sec:target_estimation}, there were two estimators implemented. The Spectral Substraction Method and the Wiener Filter. The Spectral Substraction gave the best absolute error performance and the intelligability was good. However, some noise remained after filtering. The Wiener filter had a better noise reduction, but succeeded less in keeping the original speech signal. This was found in the absolute error evaluation.
+
+A good evaluation of sources is the Mean Opinion Score, where the result is rated 0 to 5. After rating the result, the mean is taken. This is a preference based evaluation and can vary depending on the evaluating party. For this system, the Spectral Substraction received a MOS value of 1.8 while the Wiener filter received a MOS value of 1.2. This shows that noise reduction is not more important than keeping the voice signal clean.
+
+As a bonus, a beamformer was implemented in Section \ref{sec:mm_bf} to decrease the static noise on the microphones. This was found to be succesfull depending on the number of microphones. Where more microphones meant a better filtering of the static noise.
+
+\subsection{Conclusion}
+From the previous evaluation the conclusion was made that the following subsystems would be used for the single channel noise reduction. For the noise estimation, the Minimum Statistics approach was chosen due to its simplicity and performance when K is large. For the target estimation, the spectral substraction method was chosen due to the MOS rating it received. This means that a VAD and SNR estimation would no longer be needed in the system. From this, we can conclude that the system has a low complexity suited for real time audio processing.

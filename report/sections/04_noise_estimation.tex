@@ -50,6 +50,24 @@ In Fig. \ref{fig:minstatnoise}, the results are shown. Here it shows that the no
   \label{fig:minstatnoise}
 \end{figure}
 
+An important variable is the number of previous frames used. To test the optimal number of previous frames, tests are made for $K=10$ and $K=Inf$. The results of these tests are shown in Fig. \ref{fig:K10} and \ref{fig:KInf}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/MeanK10.png}
+  \caption{Results of the Minimal Statistics based approach using K=10.}
+  \label{fig:K10}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{images/MeanKinf.png}
+  \caption{Results of the Minimal Statistics based approach using K=Inf.}
+  \label{fig:KInf}
+\end{figure}
+
+
+
 \subsection{MMSE Method}
 One of the more extensive methods discussed during the course is the MMSE Method. Equation \ref{eq:noiseMMSE1} looks similar to Equation \ref{eq:smoothingsigma} when speech is not present. Instead of using the PSD of the input signal $y_k(l)$, the noise its expected value is determined for that specific time-frame. This can be done as in Equation \ref{eq:noiseMMSE2}.
 \begin{align}

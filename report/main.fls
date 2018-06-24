@@ -349,6 +349,16 @@ INPUT ./images/msmethod.png
 INPUT ./images/msmethod.png
 INPUT ./images/msmethod.png
 INPUT ./images/msmethod.png
+INPUT images/MeanK10.png
+INPUT ./images/MeanK10.png
+INPUT ./images/MeanK10.png
+INPUT ./images/MeanK10.png
+INPUT ./images/MeanK10.png
+INPUT images/MeanKinf.png
+INPUT ./images/MeanKinf.png
+INPUT ./images/MeanKinf.png
+INPUT ./images/MeanKinf.png
+INPUT ./images/MeanKinf.png
 INPUT sections/05_snr_estimation.tex
 INPUT sections/05_snr_estimation.tex
 INPUT images/mlsnr.png
