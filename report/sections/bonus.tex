@@ -1,7 +1,7 @@
 \section{Multi-microphone beamforming} \label{sec:mm_bf}
 When using multiple microphones, the spatial properties of the incomming signals can be exploited. Since there is a (small) but relevant  distance difference between the microphones, the time of arrival of the same signal differs. This time delay can be used to estimate the direction of the source and to filter other (interfering) directions.
 
-Before the system is designed and the signals are discussed, some assumptions are made. First of all, the speech and noise are assumed to be  WSS. Secondly a far field is assumed where the angles of arrival at every microphone is identical. These two assumptions can be used to simplify the incoming signals at each microphones. Since the signal is WSS, a time delay can be interpreted as a pahse shift in frequency.
+Before the system is designed and the signals are discussed, some assumptions are made. First of all, the speech and noise are assumed to be  WSS. Secondly a far field is assumed where the angles of arrival at every microphone is identical. These two assumptions can be used to simplify the incoming signals at each microphones. Since the signal is WSS, a time delay can be interpreted as a phase shift in frequency.
 
 Because there is a phase shift, spatial aliasing becomes important. This is where distance between microphones become too big where the periodic signal shifts a full time interval. To avoid this, the distance between microphones should be smaller than half of the wavelength. When assuming a maximum frequency of 8000KHz, the maximum distance between microphones is 2 milimiters.
 

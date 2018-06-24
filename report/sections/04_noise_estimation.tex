@@ -28,8 +28,10 @@ In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is
   \label{fig:VADnoise}
 \end{figure}
 
+\clearpage
+
 \subsection{Minimum Statistics Method}
-The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $y_{k}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}. Because using only the minimum value would be a underestimate of $E(|N|^2)$. A biasing factor, $B_{min}$ is added. This biasing factor used is the mean of the 10 previous values of $Q_k(l)$.
+The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $y_{k}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}. Because using only the minimum value would be a underestimate of $E(|N|^2)$. A biasing factor, $B_{min}$ is added. This biasing factor used is the mean of the 50 previous values of $Q_k(l)$, giving K=50.
 \begin{align}
 Q_{k}(l) &= \alpha_k(l)Q_k(l-1)+(1-\alpha_k(l))\abs{y_{k}(l)}^{2}\label{eq:Qk} \\
   \mathbf{Q} &=
@@ -43,31 +45,31 @@ Q_{k}(l) &= \alpha_k(l)Q_k(l-1)+(1-\alpha_k(l))\abs{y_{k}(l)}^{2}\label{eq:Qk} \
 
 In Fig. \ref{fig:minstatnoise}, the results are shown. Here it shows that the noise is canceled very well. When more frames pass, the error increases in voiced areas. This could be due to the bias factor which was added or other mis-estimated variables. It seems to perform better than the VAD based approach in general. A big positive for this method is its independence.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{images/msmethod.png}
-  \caption{Results of the Minimal Statistics based approach for estimating the noise PSD.}
+  \caption{Results of the Minimal Statistics based approach for estimating the noise PSD (K=50).}
   \label{fig:minstatnoise}
 \end{figure}
 
-An important variable is the number of previous frames used. To test the optimal number of previous frames, tests are made for $K=10$ and $K=Inf$. The results of these tests are shown in Fig. \ref{fig:K10} and \ref{fig:KInf}.
+An important variable is the number of previous frames used. To test the optimal number of previous frames, tests are made for $K=10$ and $K=Inf$. The results of these tests are shown in Fig. \ref{fig:K10} and \ref{fig:KInf}. For a lower amount of previous frames, the error increases. Thus by increasing the amount of previous frames used, the error should decrease. This is shown when all previous frames are used, giving K is infinite. Comparing this to the two tries before indeed shows a lower error present. While compared to K=10, there is a 50\% execution-time increase.
+\todo[inline]{K10 en Kinf fixen (onderkant valt er vanaf)}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{images/MeanK10.png}
   \caption{Results of the Minimal Statistics based approach using K=10.}
   \label{fig:K10}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{images/MeanKinf.png}
   \caption{Results of the Minimal Statistics based approach using K=Inf.}
   \label{fig:KInf}
 \end{figure}
 
-
-
+\clearpage
 \subsection{MMSE Method}
 One of the more extensive methods discussed during the course is the MMSE Method. Equation \ref{eq:noiseMMSE1} looks similar to Equation \ref{eq:smoothingsigma} when speech is not present. Instead of using the PSD of the input signal $y_k(l)$, the noise its expected value is determined for that specific time-frame. This can be done as in Equation \ref{eq:noiseMMSE2}.
 \begin{align}
