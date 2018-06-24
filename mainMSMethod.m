@@ -1,6 +1,6 @@
 clear
 clc
-close all
+%close all
 
 %% read first file
 [x,Fs] = audioread('src/clean_speech.wav'); % audio
@@ -31,7 +31,7 @@ Speech2 = zeros(xsize,ysize);
 %% Variables
 alpha_noisePSD = 0.98;  % alpha for noise estimate
 alpha_SNR = 0.98;       % alpha for SNR estimation
-L = 1;                  % dimension of bartlett estimate
+L = 3;                  % dimension of bartlett estimate
 QL = 50;                % Length of Min Stat vector
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
 silent_frames = 50;     % number of init silence frames
