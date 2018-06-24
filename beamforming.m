@@ -3,114 +3,75 @@ clc
 close all
 
 %% signals
-[x1,~] = audioread('src/clean_speech.wav'); % audio
-[x2,Fs] = audioread('src/babble_noise.wav'); % audio
+[s,Fs] = audioread('src/clean_speech.wav'); % audio
 
+%% samples and segment variables
 samples = 250000;
-x1 = x1(fix(end/2):fix(end/2) + samples);
-x2 = x2(fix(end/2):fix(end/2) + samples);
+s = s(fix(end/2):fix(end/2) + samples);
+frame_length = fix(Fs*0.018);
+overlap_length = fix(frame_length * 0.6);
+filter = 'shann';
 
-%% model
-Delta = 0.5;
+%% variables
+c = 340;    % speed of light
+d = 0.25*c/Fs;   % maximum distance between microphones
+M = 9;      % number of microphones
+N = frame_length;
+theta = 90;
+SNR = 5;
 
+%% segment each source
+S = segment(s, frame_length, overlap_length, filter);
+Sk = fft(S);
 
+%% Model the microphones
+% variables
+tau = cosd(theta)*d/c*Fs;
+m = (0:M-1)';
 
+% creating the model
+Yk = zeros(frame_length,size(Sk,2),M);
+disp('Creating model...');
+for j = 1 : size(Sk,2)  % for each frame
+   for k = 1 : frame_length     % for each frequency bin
+       dk = exp(-1i*2*pi*m*k*tau/N);
+       Yk(k,j,:) =dk'*Sk(k,j)/M ;
+   end
+end
 
+disp('Overlap add...');
+Y = ifft(Yk);
+for j = 1 : M
+    y(:,j) = overlap_addv3(Y(:,:,j), overlap_length, filter);
+end
+y([1 end], :) = 0;
+y = y(1:length(s),:);
+y = awgn(y, SNR, 'measured');
 
-% %% model
-% SNR = 20;
-% M = 5;
-% theta_babble = (30:1:70)';    % babble range
-% theta = [0;theta_babble];       % complete angles       
-% Delta = 0.5;
-% 
-% % create A and source
-% A = exp(1i*2*pi*Delta*(0:M-1)'*sind(theta'));
-% x_babble = kron(ones(1,length(theta_babble)), x2)/length(theta_babble);
-% S = [x1';x_babble'];
-% 
-% % create model
-% X = awgn(A*S, SNR, 'measured');
-% 
-% %% direction estimation
-% Rx = X*X'/size(X,2);
-% [U, ~, ~] = eig(Rx);
-% Un = U(:,1);
-% a = exp(1i*2*pi*Delta*(0:M-1)'*sind((-90:90)));
-% 
-% J = diag(a'*a)./diag(a'*Un*Un'*a);
-% [~, loc] = findpeaks(abs(J), 'SortStr',  'descend');
-% 
-% angles = loc-90;
-% if 0
-%     figure;
-%     semilogy(-90:90, abs(J))
-%     xlabel('angle [deg]');
-%     ylabel('magnitude [dB]');
-%     axis tight;
-%     grid;
-%     title('Direction Estimation');
-% end
-% 
-% %% MVDR
-% t = loc(1)-91;
-% a = exp(1i*2*pi*Delta*(0:M-1)'*sind(t));
-% w = Rx\a/(a'/Rx*a);
-% shat = real(w'*X);
-% 
-% %% ZF
-% wh = pinv(a);
-% s_est = real(wh*X);
-% 
-% %% spatial response
-% ax = exp(1i*2*pi*Delta*(0:M-1)'*sind((-90:90)));
-% yzf = abs((wh*ax));
-% ymvdr = abs((w'*ax));
-% 
-% %% plotting
-% clear x_babble S S_est
-% err_zf = abs(x1'-s_est);
-% err_mvdr = abs(x1'-shat);
-% if 0
-%     figure;
-%     subplot(221);
-%     plot(x1);
-%     xlabel('samples');
-%     ylabel('magnitude');
-%     title('Original Source');
-%     axis tight;
-%     grid;
-% 
-%     subplot(222)
-%     semilogy(-90:90, abs(J))
-%     xlabel('angle [deg]');
-%     ylabel('magnitude [dB]');
-%     title('Direction Estimation');
-%     axis tight;
-%     grid;
-%     
-% 
-%     subplot(223)
-%     plot(abs(err_zf)); hold on;
-%     plot(abs(err_mvdr));
-%     xlabel('samples');
-%     ylabel('error |s-s_est|');
-%     title('Estimation Error');
-%     legend('ZF', 'MVDR');
-%     axis tight;
-%     grid;
-%     
-%     subplot(224)
-%     plot((-90:90), yzf); hold on;
-%     plot((-90:90), ymvdr);
-%     xlabel('angle [deg]');
-%     ylabel('response');
-%     title('Spatial Response');
-%     legend('ZF', 'MVDR');
-%     axis tight;
-%     grid;
-% end
-% 
-% c = 340;
-% f = 8000E3;
-% d = 0.5*c/f
+%% Beamforming
+for i = 1 : M
+    Y(:,:,i) = segment(y(:,i), frame_length, overlap_length, filter); 
+end
+Yk = fft(Y);
+
+disp('Beamforming...');
+Skhat = zeros(size(Sk));
+for j = 1 : size(Y,2)   % for each frame
+   for k = 1 : frame_length   % for each frequency
+       d = exp(-1i*2*pi*m*k*tau/N);
+       w = d/(d'*d);
+       Skhat(k,j) = w'*squeeze(Yk(k,j,:));
+   end
+end
+
+Shat = ifft(Skhat);
+shat = overlap_addv3(Shat, overlap_length, filter);
+shat([1 end]) = 0;
+
+plot(real(y(:,1))); hold on
+plot(real(shat));
+axis tight
+xlabel('sample');
+ylabel('magnitude');
+title('Sum and Delay Beamformer');
+legend('original', 'filtered');
