@@ -1,5 +1,5 @@
-\section{Noise Estimation} \label{sec:noise_estimation}
-For the noise estimation, it is considered that speech and noise are independent and uncorrelated. From this Equations \ref{eq:H0} and \ref{eq:H1} can be derived.
+\section{Noise PSD Estimation} \label{sec:noise_estimation}
+For the noise estimation, it is considered that speech and noise are independent and uncorrelated. From this Equations \ref{eq:H0} and \ref{eq:H1} can be derived. Whether $H_0$ or $H_1$ corresponds to a particular timeframe is determined by the Voice Activity Detector in Section \ref{sec:vad}.
 \begin{align}
   H_{0}: & Y_{K}(l) = N_{k}(l) \quad \text{(speech absence)}
   \label{eq:H0} \\
@@ -7,8 +7,11 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:H1}
 \end{align}
 
+\subsection{Voice Activity Dectector}
+The method used to estimate the noise PSD is based on Voice Activity Detector. This Noise PSD estimation is given as Equation \ref{eq:smoothingsigma}. Where $\alpha$ is the smoothing constant. As described in \cite{Hendriks}, this method works well for noise with low variation in time.
+
 \begin{equation}
-  f(x)=
+  \sigma_{N,k}^{2}(l)=
   \begin{dcases}
       \alpha \hat \sigma_{N,k}^{2}(l-1) + (1-\alpha)\abs{y_{k}(l)}^{2} & \text{when } H_{0}(l)\\
       \hat \sigma_{N,k}^{2}(l-1) & \text{when } H_{1}(l)
@@ -16,6 +19,12 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:smoothingsigma}
 \end{equation}
 
+\todo[inline]{Noise PSD vergelijken}
+%Assuming the VAD used as described in Section \ref{sec:vad}, the following noise estimation is obtained.
+%This method is 
+
+\subsection{Minimum Statistics Method}
+The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $Y_{l}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}.
 \begin{align}
   \mathbf{Q} &=
   \begin{Bmatrix}
@@ -26,6 +35,10 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:Qmin}
 \end{align}
 
+\todo[inline]{Noise PSD vergelijken}
+
+\subsection{MMSE Method}
+One of the more extensive methods discussed during the course is the MMSE Method. Equation \ref{eq:noiseMMSE1} looks similar to Equation \ref{eq:smoothingsigma} when speech is not present. Instead of using the PSD of the input signal $y_k(l)$, the noise its expected value is determined for that specific time-frame. This can be done as in Equation \ref{eq:noiseMMSE2}.
 \begin{align}
   \widehat{\sigma_{N}^{2}}(l) &= \alpha \widehat{\sigma_{N}^{2}}(l-1) + (1-\alpha)E\left[ \abs{N_{k}(l)}^{2}\abs{y_{k}(l)}\right]
   \label{eq:noiseMMSE1} \\
@@ -35,6 +48,7 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:noiseMMSE2}
 \end{align}
 
+There are some unknowns present. The change that speech is absent can be rewritten as in Equation \ref{eq:MMSEu1}. The expected values can be given as Formulas \ref{eq:MMSEu2} and \ref{eq:MMSEu3}.
 \begin{align}
   P\left(H_{0,k}(l)|y_{k}(l)\right) &= 1 - P\left(H_{1,k}(l)|y_{k}(l)\right)
   \label{eq:MMSEu1} \\
@@ -44,6 +58,7 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:MMSEu3}
 \end{align}
 
+This leaves only one function to be determined as which can be further broken down as in Equation \ref{eq:MMSEu4}. Of which the two elements are given by Equations \ref{eq:pyh0} and \ref{eq:pyh1}.
 \begin{align}
   P\left(H_{1,k}(l)|y_{k}(l)\right) &= \frac{P\left(H_{1,k}(l))\right)p_{Y|H_{1}}}{P\left(H_{1,k}(l))\right)p_{Y|H_{1}} + P\left(H_{0,k}(l))\right)p_{Y|H_{0}}}
   \label{eq:MMSEu4}\\
@@ -52,3 +67,5 @@ For the noise estimation, it is considered that speech and noise are independent
   p_{Y|H_{0}} &= \frac{1}{\widehat{\sigma_{N}^{2}} (1+\xi_{H_{1}})\pi} \exp\left(-\frac{\abs{y^{2}}}{\widehat{\sigma_{N}^{2}}(1+\xi_{H_{1}})}\right)
   \label{eq:pyh1}
 \end{align}
+
+However, $\xi_{H_{1}}$ is unknown and there is no sufficient a priori knowledge present to give an estimation of this variable. Which makes this method unfeasible to use.

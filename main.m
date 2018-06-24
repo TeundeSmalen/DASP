@@ -1,4 +1,4 @@
-clear
+ clear
 clc
 close all
 
@@ -28,7 +28,7 @@ Speech1 = zeros(xsize,ysize);
 Speech2 = zeros(xsize,ysize);
 
 %% Variables
-alpha_noisePSD = 0.98;  % alpha for noise estimate
+alpha_noisePSD = 0.5;  % alpha for noise estimate
 alpha_SNR = 0.1;       % alpha for SNR estimation
 L = 1;                  % dimension of bartlett estimate
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
