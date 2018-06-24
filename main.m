@@ -77,23 +77,29 @@ end
 toc
 %% Overlap add and sound
 
-x = overlap_addv3(X, overlap_length, filter);
-x = real(x);
-x = x(1:size(y(:,1),1));
-factor = max(y)/max(x);
-x = factor*x;
+xh = overlap_addv3(X, overlap_length, filter);
+xh = real(xh);
+xh = xh(1:size(y(:,1),1));
+factor = max(y)/max(xh);
+xh = factor*xh;
 for i = 1:frame_length
     Speech1(i,:) = Speech(1,:);
     Speech2(i,:) = Speech(2,:);
 end
-
 Speech_1 = overlap_addv3(Speech1, overlap_length, filter);
 Speech_2 = overlap_addv3(Speech2, overlap_length, filter);
-%error = x(1:577655)-y;
-%plot(error)
+
+
+till = 250000;
 figure
-hold on
-plot(y(1:250000))
-plot(x(1:250000))
-%plot(Speech_2(1:250000))
-%soundsc(x(1:250000), Fs);
+
+subplot(121); hold on
+plot(y(1:till))
+plot(xh(1:till))
+
+subplot(122); hold on
+e = abs(x-xh).^2;
+Pmean = movmean(mean(Pnn).^2, frame_length);
+e = e * (max(Pmean)/max(e));
+semilogy(e(1:till));
+semilogy(linspace(1,till, length(Pnn)),Pmean)

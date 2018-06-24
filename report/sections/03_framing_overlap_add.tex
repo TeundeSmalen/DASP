@@ -1,7 +1,7 @@
 \section{Framing \& Overlap Add} \label{sec:framing_overlap_add}
 
-The first step, as described in Figure \ref{fig:system}, is the framing of the audio file. This is done according to Equation \ref{eq:framing}. Where $l$ is the frame index (the l-th frame), $n$ is sample number, $R$ is the hoplength. $w[n]$ is the window used to smoothen the signal in such a way that the signal does not become discontinuous and cause wrong sidelobes wen applying the FT.
-% N is frame length, R is hoplength, l is frame index.
+The first step, as described in Fig. \ref{fig:system}, is the framing of the audio file. This is done according to Eq. \ref{eq:framing}. Where $l$ is the frame index (the l-th frame), $n$ is sample number, $R$ is the hoplength. $w[n]$ is the window used to smoothen the signal in such a way that the signal does not become discontinuous and cause wrong sidelobes wen applying the FT.
+
 \begin{equation}
   \label{eq:framing}
   y_{l}[n] = y[n + lR]w[n],\quad n=0,\hdots,N-1

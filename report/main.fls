@@ -287,6 +287,11 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmrc8t.tfm
 INPUT main.tdo
 INPUT main.tdo
+OUTPUT main.tdo
+INPUT sections/01_introduction.tex
+INPUT sections/01_introduction.tex
+INPUT sections/02_system.tex
+INPUT sections/02_system.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
@@ -304,11 +309,6 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ts1ptm.fd
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8c.tfm
-OUTPUT main.tdo
-INPUT sections/01_introduction.tex
-INPUT sections/01_introduction.tex
-INPUT sections/02_system.tex
-INPUT sections/02_system.tex
 OUTPUT main.pdf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr8t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
@@ -336,9 +336,19 @@ INPUT ./images/optimal_overlap.png
 INPUT ./images/optimal_overlap.png
 INPUT sections/04_noise_estimation.tex
 INPUT sections/04_noise_estimation.tex
+INPUT images/noisepsd.png
+INPUT ./images/noisepsd.png
+INPUT ./images/noisepsd.png
+INPUT ./images/noisepsd.png
+INPUT ./images/noisepsd.png
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx7.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx5.tfm
+INPUT images/msmethod.png
+INPUT ./images/msmethod.png
+INPUT ./images/msmethod.png
+INPUT ./images/msmethod.png
+INPUT ./images/msmethod.png
 INPUT sections/05_snr_estimation.tex
 INPUT sections/05_snr_estimation.tex
 INPUT sections/06_vad.tex

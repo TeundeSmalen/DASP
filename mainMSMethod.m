@@ -8,7 +8,7 @@ x_length = length(x);                       % audio length
 frame_length = fix(Fs * 0.018);             % frame length (seconds)
 overlap_length = fix(frame_length * 0.6);   % overlap length (percentage)
 SNR = 20;                                   % SNR for noise
-filter = 'shann';
+filter = 'shann';                           % filter
 
 %% Model and segment
 y = awgn(x, SNR, 'measured');   % noisy signal
@@ -32,15 +32,16 @@ Speech2 = zeros(xsize,ysize);
 alpha_noisePSD = 0.98;  % alpha for noise estimate
 alpha_SNR = 0.98;       % alpha for SNR estimation
 L = 1;                  % dimension of bartlett estimate
-QL = 50;                 % Length of Min Stat vector
+QL = 50;                % Length of Min Stat vector
 K = 1;                  % asumed stationary for K frames (SNR_ml) 
 silent_frames = 50;     % number of init silence frames
 tic
 %% Noise Enhancement
+w = waitbar(0);
 for i = 1 : size(Y,2)   % for each frame
-    Yi = fft(Y(:,i));                       % current frame
+    waitbar(i/size(Y,2), w);
+    Yi = fft(Y(:,i));% current frame
     
-    %Pyyi = (abs(Yi).^2) / frame_length;     % spectrum noisy signal
     Pyyi = abs(Yi).^2;
     Pyy(:,i) = Pyyi;
     
@@ -52,7 +53,6 @@ for i = 1 : size(Y,2)   % for each frame
     
     % Noise PSD Estimation
     if i < silent_frames
-        %Pnni = (abs(Yi).^2) / frame_length;
         Pnni = abs(Yi).^2;
         if i > 1
            Q(:,i) = alpha_noisePSD*Q(:,i-1)+(1-alpha_noisePSD)*Pnni;
@@ -63,7 +63,6 @@ for i = 1 : size(Y,2)   % for each frame
         speechFlag2 = 0;
     else
         [speechFlag, speechFlag2] = vad(Yi, Pnn(:, i-1), SNRi);
-        %Pnni = noisePSD(Yi, Pnn(:, i-1), speechFlag2, alpha_noisePSD);
         [Pnni, Q] = MinStat(Pyyi, Q, i, QL, alpha_noisePSD);
     end
     Pnn(:,i) = Pnni;
@@ -72,36 +71,36 @@ for i = 1 : size(Y,2)   % for each frame
     
     % Target PSD Estimation
     SNRi = snr_dd(Pyyi, Pnni, S_hat ,alpha_SNR);   % directed decision
-    %SNRi = snr_ml(Pyyi, Pnni, K);
     SNR(:,i) = SNRi;
     
     % Target Estimation
-    %S_hat = spectral_substraction(Pyyi, Pnni, Yi, sqrt(0.1));
     S_hat = wiener(Yi, SNRi);
-    
     X(:,i) = ifft(S_hat);
-
 end
 toc
 %% Overlap add and sound
-
-x = overlap_addv3(X, overlap_length, filter);
-x = real(x);
-x = x(1:size(y(:,1),1));
-factor = max(y)/max(x);
-x = factor*x;
+xh = overlap_addv3(X, overlap_length, filter);
+xh = real(xh);
+xh = xh(1:size(y(:,1),1));
+factor = max(y)/max(xh);
+xh = factor*xh;
 for i = 1:frame_length
     Speech1(i,:) = Speech(1,:);
     Speech2(i,:) = Speech(2,:);
 end
 
-Speech_1 = overlap_addv3(Speech1, overlap_length, filter);
-Speech_2 = overlap_addv3(Speech2, overlap_length, filter);
-%error = x(1:577655)-y;
-%plot(error)
+%% plotting
+till = 250000;
 figure
-hold on
-plot(y(1:250000))
-plot(x(1:250000))
-%plot(Speech_2(1:250000))
-%soundsc(x(1:250000), Fs);
+
+subplot(121); hold on
+plot(y(1:till))
+plot(xh(1:till))
+
+subplot(122); hold on
+e = abs(x-xh).^2;
+Pmean = movmean(mean(Pnn).^2, frame_length);
+e = e * (max(Pmean)/max(e));
+semilogy(e(1:till));
+semilogy(linspace(1,till, length(Pnn)),Pmean)
+
