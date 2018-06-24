@@ -351,6 +351,18 @@ INPUT ./images/msmethod.png
 INPUT ./images/msmethod.png
 INPUT sections/05_snr_estimation.tex
 INPUT sections/05_snr_estimation.tex
+INPUT images/mlsnr.png
+INPUT ./images/mlsnr.png
+INPUT ./images/mlsnr.png
+INPUT ./images/mlsnr.png
+INPUT ./images/mlsnr.png
+INPUT images/ddsnr.png
+INPUT ./images/ddsnr.png
+INPUT ./images/ddsnr.png
+INPUT ./images/ddsnr.png
+INPUT ./images/ddsnr.png
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmb8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT sections/06_vad.tex
 INPUT sections/06_vad.tex
 INPUT images/vad.png
@@ -404,6 +416,8 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb

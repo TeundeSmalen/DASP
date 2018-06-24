@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  24 JUN 2018 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.25)  24 JUN 2018 22:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -1235,29 +1235,44 @@ Package pdftex.def Info: images/msmethod.png  used on input line 48.
 [4
 
  <./images/noisepsd.png (PNG copy)>]) [5 <./images/msmethod.png (PNG copy)>] (s
-ections/05_snr_estimation.tex) [6
+ections/05_snr_estimation.tex
+<images/mlsnr.png, id=57, 903.375pt x 361.35pt>
+File: images/mlsnr.png Graphic file (type png)
+<use images/mlsnr.png>
+Package pdftex.def Info: images/mlsnr.png  used on input line 26.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+[6
 
-] (sections/06_vad.tex
-<images/vad.png, id=60, 903.375pt x 361.35pt>
+ <./images/mlsnr.png (PNG copy)>]
+
+LaTeX Warning: Reference `eq:dd3.' on page 7 undefined on input line 33.
+
+<images/ddsnr.png, id=61, 903.375pt x 361.35pt>
+File: images/ddsnr.png Graphic file (type png)
+<use images/ddsnr.png>
+Package pdftex.def Info: images/ddsnr.png  used on input line 51.
+(pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
+) [7 <./images/ddsnr.png (PNG copy)>] (sections/06_vad.tex
+<images/vad.png, id=67, 903.375pt x 361.35pt>
 File: images/vad.png Graphic file (type png)
 <use images/vad.png>
 Package pdftex.def Info: images/vad.png  used on input line 26.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
-) [7
+) [8
 
- <./images/vad.png (PNG copy)>] (sections/07_target_estimation.tex) [8
+ <./images/vad.png (PNG copy)>] (sections/07_target_estimation.tex) [9
 
 ] (sections/bonus.tex
-<images/beamformer_sum_delay.png, id=71, 451.6875pt x 361.35pt>
+<images/beamformer_sum_delay.png, id=77, 451.6875pt x 361.35pt>
 File: images/beamformer_sum_delay.png Graphic file (type png)
 <use images/beamformer_sum_delay.png>
 Package pdftex.def Info: images/beamformer_sum_delay.png  used on input line 43
 .
 (pdftex.def)             Requested size: 262.04987pt x 209.6493pt.
-) [9
+) [10
 
  <./images/beamformer_sum_delay.png (PNG copy)>] (sections/08_conclusion.tex) (
-main.bbl) (sections/appendix.tex [10
+main.bbl) (sections/appendix.tex [11
 
 ])
 
@@ -1271,35 +1286,39 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
+[12
 
-] (main.aux) ) 
+] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 17667 strings out of 493303
- 330959 string characters out of 3138859
+ 17682 strings out of 493303
+ 331188 string characters out of 3138859
  399198 words of memory out of 3000000
- 20840 multiletter control sequences out of 15000+200000
- 107318 words of font info for 116 fonts, out of 3000000 for 9000
+ 20852 multiletter control sequences out of 15000+200000
+ 108425 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,77p,842b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on main.pdf (11 pages, 497592 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8
+a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (12 pages, 614794 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
