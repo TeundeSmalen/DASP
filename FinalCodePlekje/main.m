@@ -83,7 +83,7 @@ for i = 1 : size(Y,2)   % for each frame
     if VarSNR == 0
         SNRi = snr_dd(Pyyi, Pnni, S_hat ,alpha_SNR);    %directed decision
     else
-        SNRi = snr_ml(Pyyi, Pnni, K);                   %Minimum Likelihood
+        SNRi = snr_ml(Pyyi, Pnni, K);                   %Maximum Likelihood
     end
     SNR(:,i) = SNRi; %Add to SNR Matrix
     
