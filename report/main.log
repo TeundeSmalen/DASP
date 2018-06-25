@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.22)  25 JUN 2018 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.22)  25 JUN 2018 02:24
 entering extended mode
 **./main.tex
 (main.tex
@@ -1093,6 +1093,11 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ) ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
+(mcode.sty
+-- Package: `mcode' 2.7 <2015/11/11> --
+Package: mcode 2015/11/11 2.7
+ - settings optimized for display (colour formating)
+
 ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.s
 ty"
 \lst@mode=\count129
@@ -1120,89 +1125,102 @@ fg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
-
+)
+("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.s
+ty"
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box42
+\beforetitleunit=\skip51
+\aftertitleunit=\skip52
+\ttl@plus=\dimen194
+\ttl@minus=\dimen195
+\ttl@toksa=\toks38
+\titlewidth=\dimen196
+\titlewidthlast=\dimen197
+\titlewidthfirst=\dimen198
+)
 ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.s
 ty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-\tindent=\skip51
+\tindent=\skip53
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 53.
 
 ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 49.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 53.
 
 ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count137
-\scratchdimen=\dimen194
-\scratchbox=\box42
+\scratchdimen=\dimen199
+\scratchbox=\box43
 \nofMPsegments=\count138
 \nofMParguments=\count139
-\everyMPshowfont=\toks38
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count140
-\MPscratchDim=\dimen195
+\MPscratchDim=\dimen256
 \MPnumerator=\count141
 \makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks39
+\everyMPtoPDFconversion=\toks40
 )
 ("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
 ase.sty"
@@ -1273,15 +1291,15 @@ Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 49.
-Package gensymb Info: Math companion symbols declared on input line 49.
-LaTeX Info: Redefining \degree on input line 49.
-LaTeX Info: Redefining \celsius on input line 49.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/bx/n on input line 53.
+Package gensymb Info: Math companion symbols declared on input line 53.
+LaTeX Info: Redefining \degree on input line 53.
+LaTeX Info: Redefining \celsius on input line 53.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 49.
-LaTeX Info: Redefining \ohm on input line 49.
-Package gensymb Info: Using \textohm for \ohm on input line 49.
-Package gensymb Info: Using \textmu for \micro on input line 49.
+erthousand on input line 53.
+LaTeX Info: Redefining \ohm on input line 53.
+Package gensymb Info: Using \textohm for \ohm on input line 53.
+Package gensymb Info: Using \textmu for \micro on input line 53.
 \c@lstlisting=\count143
  (main.tdo
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
@@ -1368,24 +1386,23 @@ Package pdftex.def Info: images/mlsnr.png  used on input line 26.
  [8
 
  <./images/mlsnr.png (PNG copy)>]
-
-LaTeX Warning: Reference `eq:dd3.' on page 9 undefined on input line 33.
-
 <images/ddsnr.png, id=70, 903.375pt x 361.35pt>
 File: images/ddsnr.png Graphic file (type png)
 <use images/ddsnr.png>
 Package pdftex.def Info: images/ddsnr.png  used on input line 51.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
-) [9 <./images/ddsnr.png (PNG copy)>] (sections/06_vad.tex
-<images/vad.png, id=75, 903.375pt x 361.35pt>
+) [9 <./images/ddsnr.png (PNG copy)>]
+(sections/06_vad.tex
+<images/vad.png, id=74, 903.375pt x 361.35pt>
 File: images/vad.png Graphic file (type png)
 <use images/vad.png>
 Package pdftex.def Info: images/vad.png  used on input line 26.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
 ) [10
 
- <./images/vad.png (PNG copy)>] (sections/07_target_estimation.tex
-<images/spectral_substraction.png, id=80, 903.375pt x 361.35pt>
+ <./images/vad.png (PNG copy)>]
+(sections/07_target_estimation.tex
+<images/spectral_substraction.png, id=79, 903.375pt x 361.35pt>
 File: images/spectral_substraction.png Graphic file (type png)
 <use images/spectral_substraction.png>
 Package pdftex.def Info: images/spectral_substraction.png  used on input line 2
@@ -1394,16 +1411,15 @@ Package pdftex.def Info: images/spectral_substraction.png  used on input line 2
  [11
 
  <./images/spectral_substraction.png (PNG copy)>]
-<images/wiener.png, id=86, 903.375pt x 361.35pt>
+<images/wiener.png, id=85, 903.375pt x 361.35pt>
 File: images/wiener.png Graphic file (type png)
 <use images/wiener.png>
 Package pdftex.def Info: images/wiener.png  used on input line 42.
 (pdftex.def)             Requested size: 524.09975pt x 209.6493pt.
 ) [12
 
- <./images/wiener.png (PNG copy)>]
-(sections/bonus.tex
-<images/beamformer_sum_delay.png, id=90, 451.6875pt x 361.35pt>
+ <./images/wiener.png (PNG copy)>] (sections/bonus.tex
+<images/beamformer_sum_delay.png, id=89, 451.6875pt x 361.35pt>
 File: images/beamformer_sum_delay.png Graphic file (type png)
 <use images/beamformer_sum_delay.png>
 Package pdftex.def Info: images/beamformer_sum_delay.png  used on input line 43
@@ -1411,10 +1427,35 @@ Package pdftex.def Info: images/beamformer_sum_delay.png  used on input line 43
 (pdftex.def)             Requested size: 262.04987pt x 209.6493pt.
 ) [13
 
- <./images/beamformer_sum_delay.png (PNG copy)>]
-(sections/08_conclusion.tex) (main.bbl) (sections/appendix.tex [14
+ <./images/beamformer_sum_delay.png (PNG copy)>] (sections/08_conclusion.tex)
+(main.bbl) (sections/appendix.tex [14
+
+]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 6.
+
+("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+(../FinalCodePlekje/main.m
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 6.
+
+("C:\Users\Teun\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [15
 
 ])
+[16] (../FinalCodePlekje/functions/segment.m)
+(../FinalCodePlekje/functions/vad.m) (../FinalCodePlekje/functions/noisePSD.m
+[17
+
+]) (../FinalCodePlekje/functions/MinStat.m)
+(../FinalCodePlekje/functions/snr_ml.m) (../FinalCodePlekje/functions/snr_dd.m)
+(../FinalCodePlekje/functions/spectral_substraction.m [18])
+(../FinalCodePlekje/functions/wiener.m)
+(../FinalCodePlekje/functions/overlap_add.m))
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1426,44 +1467,38 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[15
-
-] (main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[19] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 17778 strings out of 493305
- 336769 string characters out of 3130237
- 399637 words of memory out of 3000000
- 20941 multiletter control sequences out of 15000+200000
- 109503 words of font info for 118 fonts, out of 3000000 for 9000
+ 19250 strings out of 493305
+ 353913 string characters out of 3130237
+ 626319 words of memory out of 3000000
+ 22366 multiletter control sequences out of 15000+200000
+ 110710 words of font info for 122 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,80p,842b,604s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
-<C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmex10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Teun/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Teun/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb>
-<C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr7.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Teun/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Teu
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb
-8a.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/u
-tmr8a.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on main.pdf (15 pages, 808916 bytes).
+ 62i,14n,80p,842b,2169s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
+ps/base/8r.enc}<C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Teun/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Teun/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Teun/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Us
+ers/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Teun/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Teun
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pf
+b><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/courier/ucrr8a.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/urw/times/utmr8a.pfb><C:/Users/Teun/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (19 pages, 831784 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
