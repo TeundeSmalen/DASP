@@ -19,7 +19,7 @@ The method used to estimate the noise PSD is based on Voice Activity Detector. T
   \label{eq:smoothingsigma}
 \end{equation}
 
-In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is canceled for a great part. Especially in the speech absence regions. This is Because of the Wiener filter implementation in combination with the excelent noise estimate when speech is not present. The speech presence regions are uncertain and can have significant errors. This uncertainty is expected to be due to non-optimal variables and reliability on the VAD. When a system becomes more reliable on other system, its robustness could decline when the subsystems are not accurate.
+In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is canceled for a great part. Especially in the speech absence regions. This is Because of the Wiener filter, which is discussed in Section \ref{sec:target_estimation}, implementation in combination with the excellent noise estimate when speech is not present. The speech presence regions are uncertain and can have significant errors. This uncertainty is expected to be due to non-optimal variables and reliability on the VAD. When a system becomes more reliable on other system, its robustness could decline when the subsystems are not accurate.
 
 \begin{figure}[h]
   \centering
