@@ -208,12 +208,16 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/was/gensymb.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/was/gensymb.sty
+INPUT mcode.sty
+INPUT mcode.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/listings.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/listings.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/lstmisc.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/lstmisc.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/listings.cfg
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/listings.cfg
+INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/titlesec/titlesec.sty
+INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/titlesec/titlesec.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/lstlang1.sty
 INPUT C:/Users/Erik/AppData/Roaming/MiKTeX/2.9/tex/latex/listings/lstlang1.sty
 INPUT main.aux
@@ -284,12 +288,9 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
 INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT sections/01_introduction.tex
+INPUT sections/01_introduction.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmrc8t.tfm
-INPUT main.tdo
-INPUT main.tdo
-OUTPUT main.tdo
-INPUT sections/01_introduction.tex
-INPUT sections/01_introduction.tex
 INPUT sections/02_system.tex
 INPUT sections/02_system.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -371,8 +372,6 @@ INPUT ./images/ddsnr.png
 INPUT ./images/ddsnr.png
 INPUT ./images/ddsnr.png
 INPUT ./images/ddsnr.png
-INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmb8t.vf
-INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT sections/06_vad.tex
 INPUT sections/06_vad.tex
 INPUT images/vad.png
@@ -382,6 +381,18 @@ INPUT ./images/vad.png
 INPUT ./images/vad.png
 INPUT sections/07_target_estimation.tex
 INPUT sections/07_target_estimation.tex
+INPUT images/spectral_substraction.png
+INPUT ./images/spectral_substraction.png
+INPUT ./images/spectral_substraction.png
+INPUT ./images/spectral_substraction.png
+INPUT ./images/spectral_substraction.png
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT images/wiener.png
+INPUT ./images/wiener.png
+INPUT ./images/wiener.png
+INPUT ./images/wiener.png
+INPUT ./images/wiener.png
 INPUT sections/bonus.tex
 INPUT sections/bonus.tex
 INPUT images/beamformer_sum_delay.png
@@ -398,6 +409,48 @@ INPUT sections/appendix.tex
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr8t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmri8t.vf
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ../FinalCodePlekje/main.m
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT ../FinalCodePlekje/main.m
+INPUT ../FinalCodePlekje/main.m
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ts1pcr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ts1pcr.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8c.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/times/ptmr8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/vf/adobe/courier/pcrr8c.vf
+INPUT ../FinalCodePlekje/functions/segment.m
+INPUT ../FinalCodePlekje/functions/segment.m
+INPUT ../FinalCodePlekje/functions/segment.m
+INPUT ../FinalCodePlekje/functions/vad.m
+INPUT ../FinalCodePlekje/functions/vad.m
+INPUT ../FinalCodePlekje/functions/vad.m
+INPUT ../FinalCodePlekje/functions/noisePSD.m
+INPUT ../FinalCodePlekje/functions/noisePSD.m
+INPUT ../FinalCodePlekje/functions/noisePSD.m
+INPUT ../FinalCodePlekje/functions/MinStat.m
+INPUT ../FinalCodePlekje/functions/MinStat.m
+INPUT ../FinalCodePlekje/functions/MinStat.m
+INPUT ../FinalCodePlekje/functions/snr_ml.m
+INPUT ../FinalCodePlekje/functions/snr_ml.m
+INPUT ../FinalCodePlekje/functions/snr_ml.m
+INPUT ../FinalCodePlekje/functions/snr_dd.m
+INPUT ../FinalCodePlekje/functions/snr_dd.m
+INPUT ../FinalCodePlekje/functions/snr_dd.m
+INPUT ../FinalCodePlekje/functions/spectral_substraction.m
+INPUT ../FinalCodePlekje/functions/spectral_substraction.m
+INPUT ../FinalCodePlekje/functions/spectral_substraction.m
+INPUT ../FinalCodePlekje/functions/wiener.m
+INPUT ../FinalCodePlekje/functions/wiener.m
+INPUT ../FinalCodePlekje/functions/wiener.m
+INPUT ../FinalCodePlekje/functions/overlap_add.m
+INPUT ../FinalCodePlekje/functions/overlap_add.m
+INPUT ../FinalCodePlekje/functions/overlap_add.m
 INPUT main.aux
 INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -426,8 +479,8 @@ INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
-INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
 INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb

@@ -7,7 +7,7 @@ For the noise estimation, it is considered that speech and noise are independent
   \label{eq:H1}
 \end{align}
 
-\subsection{Voice Activity Dectector}
+\subsection{Voice Activity Detector}
 The method used to estimate the noise PSD is based on Voice Activity Detector. This Noise PSD estimation is given as Eq. \ref{eq:smoothingsigma}. Where $\alpha$ is the smoothing constant. As described in \cite{Hendriks}, this method works well for noise with low variation in time.
 
 \begin{equation}
@@ -19,7 +19,7 @@ The method used to estimate the noise PSD is based on Voice Activity Detector. T
   \label{eq:smoothingsigma}
 \end{equation}
 
-In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is canceled for a great part. Especially in the speech absence regions. This is Because of the Wiener filter, which is discussed in Section \ref{sec:target_estimation}, implementation in combination with the excellent noise estimate when speech is not present. The speech presence regions are uncertain and can have significant errors. This uncertainty is expected to be due to non-optimal variables and reliability on the VAD. When a system becomes more reliable on other system, its robustness could decline when the subsystems are not accurate.
+In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is canceled for a great part. Especially in the speech absence regions. This is because of the Wiener filter, which is discussed in Section \ref{sec:target_estimation}, implementation in combination with the excellent noise estimate when speech is not present. The speech presence regions are uncertain and can have significant errors. This uncertainty is expected to be due to non-optimal variables and reliability on the VAD. When a system becomes more reliable on other system, its robustness could decline when the subsystems are not accurate.
 
 \begin{figure}[h]
   \centering
@@ -31,7 +31,7 @@ In Fig. \ref{fig:VADnoise}, the results are shown. From the figure, the noise is
 \clearpage
 
 \subsection{Minimum Statistics Method}
-The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $y_{k}$ as can be seen in Equation \ref{eq:Q} and \ref{eq:Qmin}. Because using only the minimum value would be a underestimate of $E(|N|^2)$. A biasing factor, $B_{min}$ is added. This biasing factor used is the mean of the 50 previous values of $Q_k(l)$, giving K=50.
+The Minimum Statistics Method does not depend on the Voice Activity Detector and only depends on previous time frames of $y_{k}$ as can be seen in Eq. \ref{eq:Q} and \ref{eq:Qmin}. Because using only the minimum value would be a underestimate of $E(|N|^2)$. A biasing factor, $B_{min}$ is added. This biasing factor used is the mean of the 50 previous values of $Q_k(l)$, giving K=50.
 \begin{align}
 Q_{k}(l) &= \alpha_k(l)Q_k(l-1)+(1-\alpha_k(l))\abs{y_{k}(l)}^{2}\label{eq:Qk} \\
   \mathbf{Q} &=
@@ -43,7 +43,7 @@ Q_{k}(l) &= \alpha_k(l)Q_k(l-1)+(1-\alpha_k(l))\abs{y_{k}(l)}^{2}\label{eq:Qk} \
   \label{eq:Qmin}\\
 \end{align}
 
-In Fig. \ref{fig:minstatnoise}, the results are shown. Here it shows that the noise is canceled very well. When more frames pass, the error increases in voiced areas. This could be due to the bias factor which was added or other mis-estimated variables. It seems to perform better than the VAD based approach in general. A big positive for this method is its independence.
+In Fig. \ref{fig:minstatnoise}, the results are shown. Here it shows that the noise is canceled very well. When more frames pass, the error increases in voiced areas. This could be due to the bias factor which was added or other miss-estimated variables. It seems to perform better than the VAD based approach in general. A big positive for this method is its independence.
 
 \begin{figure}[h]
   \centering
@@ -53,7 +53,6 @@ In Fig. \ref{fig:minstatnoise}, the results are shown. Here it shows that the no
 \end{figure}
 
 An important variable is the number of previous frames used. To test the optimal number of previous frames, tests are made for $K=10$ and $K=Inf$. The results of these tests are shown in Fig. \ref{fig:K10} and \ref{fig:KInf}. For a lower amount of previous frames, the error increases. Thus by increasing the amount of previous frames used, the error should decrease. This is shown when all previous frames are used, giving K is infinite. Comparing this to the two tries before indeed shows a lower error present. While compared to K=10, there is a 50\% execution-time increase.
-\todo[inline]{K10 en Kinf fixen (onderkant valt er vanaf)}
 
 \begin{figure}[h]
   \centering
@@ -71,7 +70,7 @@ An important variable is the number of previous frames used. To test the optimal
 
 \clearpage
 \subsection{MMSE Method}
-One of the more extensive methods discussed during the course is the MMSE Method. Equation \ref{eq:noiseMMSE1} looks similar to Equation \ref{eq:smoothingsigma} when speech is not present. Instead of using the PSD of the input signal $y_k(l)$, the noise its expected value is determined for that specific time-frame. This can be done as in Equation \ref{eq:noiseMMSE2}.
+One of the more extensive methods discussed during the course is the MMSE Method. Eq.  \ref{eq:noiseMMSE1} looks similar to Eq. \ref{eq:smoothingsigma} when speech is not present. Instead of using the PSD of the input signal $y_k(l)$, the noise its expected value is determined for that specific time-frame. This can be done as in Eq. \ref{eq:noiseMMSE2}.
 \begin{align}
   \widehat{\sigma_{N}^{2}}(l) &= \alpha \widehat{\sigma_{N}^{2}}(l-1) + (1-\alpha)E\left[ \abs{N_{k}(l)}^{2}\abs{y_{k}(l)}\right]
   \label{eq:noiseMMSE1} \\
@@ -81,7 +80,7 @@ One of the more extensive methods discussed during the course is the MMSE Method
   \label{eq:noiseMMSE2}
 \end{align}
 
-There are some unknowns present. The change that speech is absent can be rewritten as in Equation \ref{eq:MMSEu1}. The expected values can be given as Formulas \ref{eq:MMSEu2} and \ref{eq:MMSEu3}.
+There are some unknowns present. The change that speech is absent can be rewritten as in Eq. \ref{eq:MMSEu1}. The expected values can be given as Eq.  \ref{eq:MMSEu2} and \ref{eq:MMSEu3}.
 \begin{align}
   P\left(H_{0,k}(l)|y_{k}(l)\right) &= 1 - P\left(H_{1,k}(l)|y_{k}(l)\right)
   \label{eq:MMSEu1} \\
@@ -91,7 +90,7 @@ There are some unknowns present. The change that speech is absent can be rewritt
   \label{eq:MMSEu3}
 \end{align}
 
-This leaves only one function to be determined as which can be further broken down as in Equation \ref{eq:MMSEu4}. Of which the two elements are given by Equations \ref{eq:pyh0} and \ref{eq:pyh1}.
+This leaves only one function to be determined as which can be further broken down as in Eq. \ref{eq:MMSEu4}. Of which the two elements are given by Eq. \ref{eq:pyh0} and \ref{eq:pyh1}.
 \begin{align}
   P\left(H_{1,k}(l)|y_{k}(l)\right) &= \frac{P\left(H_{1,k}(l))\right)p_{Y|H_{1}}}{P\left(H_{1,k}(l))\right)p_{Y|H_{1}} + P\left(H_{0,k}(l))\right)p_{Y|H_{0}}}
   \label{eq:MMSEu4}\\

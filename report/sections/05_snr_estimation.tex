@@ -1,5 +1,5 @@
 \section{SNR Estimation} \label{sec:snr_estimation}
-The SNR estimation is used for a few subsystems. The Voice Ativity Detection in Section \ref{sec:vad} and the Target Estimation for the Wiener filter in Section \ref{sec:target_estimation}. There are two main approaches to estimate the SNR, these are discussed in this Section.
+The SNR estimation is used for a few subsystems. The Voice Activity Detection in Section \ref{sec:vad} and the Target Estimation for the Wiener filter in Section \ref{sec:target_estimation}. There are two main approaches to estimate the SNR, these are discussed in this Section.
 First the definition of the SNR is written down in Eq. \ref{eq:SNR}. The SNR is the power of the signal divided by the power of the noise. Often, this is expressed in decibel.
 
 \begin{equation}
@@ -19,7 +19,7 @@ The first estimation approach is based on the maximum likelihood. Here, the sign
   \label{eq:M2}
 \end{align}
 
-The first testresults of the estimator can be seen in Fig. \ref{fig:mlsnr}. The plot does not include the SNR lower than 0. The SNR estimates are not accurate since the SNR in the test was set at 20dB and the mean of the SNR estimates was 12dB. During speechless periods, it dit give a very small SNR estimate. This could be used as a good indicator for the VAD system.
+The first test results of the estimator can be seen in Fig. \ref{fig:mlsnr}. The plot does not include the SNR lower than 0. The SNR estimates are not accurate since the SNR in the test was set at 20dB and the mean of the SNR estimates was 12dB. During speechless periods, it dit give a very small SNR estimate. This could be used as a good indicator for the VAD system.
 
 \begin{figure}[h]
   \centering

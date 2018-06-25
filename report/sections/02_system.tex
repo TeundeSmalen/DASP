@@ -9,7 +9,7 @@ Before the architecture of the system can be designed, the signal model and assu
   \label{eq:signal_freq}
 \end{align}
 
-To simplify the model more, some assumptions are made. The first assumption is that the source signal and noise are uncorrelated (Eq. \ref{eq:signal_uncorrelated1}). This allows for the autocorrelation of the received signal to be simplified. Since the source and noise are uncorrelated, the autocorrelation of the received signal can be expressed by the addition of the autocorrelation of the signal and the noise (Eq. \ref{eq:signal_uncorrelated2}). The second assumption is that the speech signal is wide-sense stationary (WSS) in small frames \ref{eq:signal_wss}). Since a speech signal can be seen as a periodic signal or noise, this assumption holds in theory. In practise, speech is not stationary but the performance of the enhancement system is sufficient.
+To simplify the model more, some assumptions are made. The first assumption is that the source signal and noise are uncorrelated (Eq. \ref{eq:signal_uncorrelated1}). This allows for the autocorrelation of the received signal to be simplified. Since the source and noise are uncorrelated, the autocorrelation of the received signal can be expressed by the addition of the autocorrelation of the signal and the noise (Eq. \ref{eq:signal_uncorrelated2}). The second assumption is that the speech signal is wide-sense stationary (WSS) in small frames (Eq. \ref{eq:signal_wss}). Since a speech signal can be seen as a periodic signal or noise, this assumption holds in theory. In practice, speech is not stationary but the performance of the enhancement system is sufficient.
 
 \begin{align}
   R_{S_{t}N_{t}}(n,m) &= 0 \quad \text{(uncorrelated)}
@@ -20,7 +20,7 @@ To simplify the model more, some assumptions are made. The first assumption is t
   \label{eq:signal_wss}
 \end{align}
 
-An important property of audio is the power spectrum density (PSD). The PSD is defined as the Fourier Transform (FT) of the autocorrelation (Eq. \ref{eq:pyyk1}). And with the assumption of uncorrelated noie and source, this can be expressed as the PSD of the signal and noise added as in Eq. \ref{eq:pyyk2}. Since the frames are of finite length, an estimation of the PSD needs to be made. The estimation of Eq. \ref{eq:pyyest} is called the periodogram of the signal. To enhance this estimation, Bartlett's method can be used shown in Eq. \ref{eq:pyyBest}.
+An important property of audio is the power spectrum density (PSD). The PSD is defined as the Fourier Transform (FT) of the autocorrelation (Eq. \ref{eq:pyyk1}). And with the assumption of uncorrelated noise and source, this can be expressed as the PSD of the signal and noise added as in Eq. \ref{eq:pyyk2}. Since the frames are of finite length, an estimation of the PSD needs to be made. The estimation of Eq. \ref{eq:pyyest} is called the periodogram of the signal. To enhance this estimation, Bartlett's method can be used shown in Eq. \ref{eq:pyyBest}.
 
 \begin{align}
   P_{YY,k} &= \lim_{L \to \infty} \sum_{m=-L/2}^{L/2} R_{Y_{t}Y_{t}}(m) e^{-j2\pi \frac{km}{K}}
@@ -35,8 +35,8 @@ An important property of audio is the power spectrum density (PSD). The PSD is d
 
 \subsection{System overview}
 From the signal model, a few components of the system can be derived. Firstly, to hold the WSS assumption, the signal sequence needs to be split in multiple segments. This process will be expressed as Framing.
-Since the PSD is an important property of the signal, it need to be converted to the frequency domain. A problem is that the FT can cause problems in the sidelobes of the frames due to Gibb's phenomenom. To avoid this, the framing function needs to window this signal frame to suppress the edges of the frame. The frames will become overlapping.
-At the end of the system, the time domain representation of the signal will be recovered using the inverse FT and the frames will be merged using the overlapp add method where a deframing window is used.
+Since the PSD is an important property of the signal, it need to be converted to the frequency domain. A problem is that the FT can cause problems in the sidelobes of the frames due to Gibb's phenomenon. To avoid this, the framing function needs to window this signal frame to suppress the edges of the frame. The frames will become overlapping.
+At the end of the system, the time domain representation of the signal will be recovered using the inverse FT and the frames will be merged using the overlap add method where a deframing window is used.
 To estimate the source, some other properties need to be estimated from the received signal. These important properties include the estimated noise PSD, the estimated source PSD (by estimating the SNR) and if the source is present. With these properties, a gain filter can be created for the received signal which should suppress the noise and interference.
 The resulting system design is shown in Fig. \ref{fig:system}.
 

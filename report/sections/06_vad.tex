@@ -1,5 +1,5 @@
 \section{Voice Activity Detection} \label{sec:vad}
-For the noise PSD estimation in Section \ref{sec:noise_estimation} and the SNR estimation in Section \ref{sec:snr_estimation}, the pressence of speech is needed to increase the performance of the estimators. The Voice Activity Detector will evaluate the frame and give a speechflag wether speech is present or not.
+For the noise PSD estimation in Section \ref{sec:noise_estimation} and the SNR estimation in Section \ref{sec:snr_estimation}, the presence of speech is needed to increase the performance of the estimators. The Voice Activity Detector will evaluate the frame and give a speech-flag whether speech is present or not.
 
 This can be done by looking at the average energy of the frame. In the case of speech present and a SNR bigger than 0, this should be higher than in the case of noise only. To get a linear scaling with respect to the SNR, the log-energy is calculated. We then can express the energy difference as stated in Eq. \ref{eq:TH0} and Eq. \ref{eq:TH1}. This likelihood function is shown in Eq. \ref{eq:vad1} and Eq. \ref{eq:vad2}.
 
